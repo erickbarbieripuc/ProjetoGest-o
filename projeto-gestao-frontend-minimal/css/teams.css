@@ -1,0 +1,14 @@
+/* teams specific (minimal) */
+
+body[data-page="teams"] .header {
+	margin-bottom: 1.2rem;
+}
+
+.panel .toolbar {
+	margin-bottom: 1.2rem;
+}
+.panel .btn.new-team {
+	min-width: 120px;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+}

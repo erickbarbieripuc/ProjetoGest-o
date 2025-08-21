@@ -1,0 +1,5 @@
+/* chat specific (minimal) */
+
+body[data-page="chat"] .header {
+	margin-bottom: 1.2rem;
+}

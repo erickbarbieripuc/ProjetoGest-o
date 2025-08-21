@@ -1,0 +1,14 @@
+/* kanban specific (minimal) */
+
+body[data-page="kanban"] .header {
+	margin-bottom: 1.2rem;
+}
+
+.kanban-toolbar {
+	display: flex;
+	gap: .7rem;
+	margin-bottom: 1rem;
+}
+.kanban-toolbar .btn {
+	min-width: 110px;
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Login/Registro · Sistema de Gestão de Projetos</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/login.css"/>
+  <meta name="color-scheme" content="dark light"/>
+</head>
+<body data-page="login">
+  <div class="auth">
+    <div class="tabs">
+      <a href="#login" class="active">Login</a>
+      <a href="#registro">Registro</a>
+    </div>
+    <div class="body" id="login">
+      <form method="post" action="/login" data-form="login">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="username" required/>
+        <label for="password">Senha</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required/>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.6rem">
+          <a class="btn ghost" href="#">Esqueci minha senha</a>
+          <button class="btn" type="submit">Entrar</button>
+        </div>
+      </form>
+      <div class="switch">
+        <span>Novo aqui?</span> <a href="#registro">Criar conta</a>
+      </div>
+    </div>
+    <div class="body" id="registro">
+      <form method="post" action="/register" data-form="register">
+        <label for="name">Nome</label>
+        <input id="name" name="name" required/>
+        <label for="email2">E-mail</label>
+        <input id="email2" name="email" type="email" required/>
+        <label for="password2">Senha</label>
+        <input id="password2" name="password" type="password" required/>
+        <label for="password3">Confirmar senha</label>
+        <input id="password3" name="password_confirm" type="password" required/>
+        <label><input type="checkbox" required/> Aceito os termos</label>
+        <div style="display:flex;justify-content:flex-end;margin-top:.6rem">
+          <button class="btn" type="submit">Criar conta</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer">UI estática. Redirecione entre #login e #registro via servidor.</div>
+</body>
+</html>

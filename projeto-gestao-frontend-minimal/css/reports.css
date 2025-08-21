@@ -1,0 +1,27 @@
+/* reports specific (minimal) */
+
+body[data-page="reports"] .header {
+	margin-bottom: 1.2rem;
+}
+
+.panel .metrics {
+	display: flex;
+	gap: 2.2rem;
+	margin-bottom: 1.2rem;
+	align-items: flex-end;
+}
+.panel .metrics .metric {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-width: 120px;
+}
+.panel .metrics .metric-title {
+	font-size: 1.1rem;
+	color: #b7c1f3;
+	margin-bottom: .2rem;
+}
+.panel .metrics .metric-value {
+	font-size: 1.7rem;
+	font-weight: bold;
+}

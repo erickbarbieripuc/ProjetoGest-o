@@ -1,0 +1,7 @@
+/* Login minimal */
+.auth{max-width:440px;margin:5vh auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+.auth .tabs{display:flex}
+.auth .tabs a{flex:1;text-align:center;padding:.8rem;border-bottom:1px solid var(--border);color:var(--muted)}
+.auth .tabs a.active{color:var(--text);background:var(--surface-2)}
+.auth .body{padding:.9rem}
+.switch{display:flex;gap:.6rem;margin-top:.6rem;font-size:.9rem;color:var(--muted)}

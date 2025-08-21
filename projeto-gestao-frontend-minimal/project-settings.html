@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Configurações do Projeto · Sistema de Gestão de Projetos</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/project-settings.css"/>
+  <meta name="color-scheme" content="dark light"/>
+</head>
+<body data-page="project-settings">
+  <div class="container">
+    <aside class="aside">
+      <div class="brand"><div class="dot"></div><h1>Gestão de Projetos</h1></div>
+      <nav class="nav">
+        <div class="section">Navegação</div>
+        <a href="index.html" class="">Dashboard</a>
+        <a href="projects.html" class="">Projetos</a>
+        <a href="project-form.html" class="">Criar/Editar Projeto</a>
+        <a href="project-detail.html" class="">Detalhe do Projeto</a>
+        <a href="task-form.html" class="">Criar/Editar Tarefa</a>
+        <a href="kanban.html" class="">Kanban</a>
+        <a href="assignments.html" class="">Atribuição de Tarefas</a>
+        <a href="deadlines.html" class="">Controle de Prazos</a>
+        <a href="reports.html" class="">Relatórios</a>
+        <a href="teams.html" class="">Equipes</a>
+        <a href="chat.html" class="">Chat</a>
+        <a href="profile.html" class="">Perfil</a>
+        <a href="project-settings.html" class="active">Configurações do Projeto</a>
+        <a href="help.html" class="">Ajuda</a>
+        <a href="login.html" class="">Login/Registro</a>
+      </nav>
+      <hr/>
+      <div class="hint">UI estática em HTML/CSS. Conecte ao Java via JSP/Thymeleaf/Servlet.</div>
+    </aside>
+    <div>
+      <header class="header">
+        <div class="search">
+          <input aria-label="Busca" placeholder="Buscar..."/>
+          <button class="btn secondary" type="button">Buscar</button>
+        </div>
+        <div class="user"><span class="badge">Aluno</span><div class="avatar" aria-hidden="true"></div></div>
+      </header>
+      <main class="main">
+        
+<form class="panel" method="post" action="/projects/settings">
+  <h2>Configurações</h2>
+  <div class="form-row">
+    <div class="col-4"><label>Status</label><select><option>Ativo</option><option>Planejamento</option><option>Arquivado</option></select></div>
+    <div class="col-4"><label>Visibilidade</label><select><option>Privado</option><option>Público</option></select></div>
+    <div class="col-4"><label>Etiquetas (comma-separated)</label><input/></div>
+    <div class="col-12"><label>Colunas Kanban (comma-separated)</label><input placeholder="Backlog, Fazendo, Revisão, Concluída"/></div>
+  </div>
+  <div style="display:flex; gap:.6rem; justify-content:flex-end; margin-top:.6rem">
+    <button class="btn">Salvar</button>
+  </div>
+</form>
+
+      </main>
+      <div class="footer">© Configurações do Projeto — UI mínima</div>
+    </div>
+  </div>
+</body>
+</html>

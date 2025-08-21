@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dashboard · Sistema de Gestão de Projetos</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/index.css"/>
+  <meta name="color-scheme" content="dark light"/>
+</head>
+<body data-page="dashboard">
+  <div class="container">
+    <aside class="aside">
+      <div class="brand"><div class="dot"></div><h1>Gestão de Projetos</h1></div>
+      <nav class="nav">
+        <div class="section">Navegação</div>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="projects.html" class="">Projetos</a>
+        <a href="project-form.html" class="">Criar/Editar Projeto</a>
+        <a href="project-detail.html" class="">Detalhe do Projeto</a>
+        <a href="task-form.html" class="">Criar/Editar Tarefa</a>
+        <a href="kanban.html" class="">Kanban</a>
+        <a href="assignments.html" class="">Atribuição de Tarefas</a>
+        <a href="deadlines.html" class="">Controle de Prazos</a>
+        <a href="reports.html" class="">Relatórios</a>
+        <a href="teams.html" class="">Equipes</a>
+        <a href="chat.html" class="">Chat</a>
+        <a href="profile.html" class="">Perfil</a>
+        <a href="project-settings.html" class="">Configurações do Projeto</a>
+        <a href="help.html" class="">Ajuda</a>
+        <a href="login.html" class="">Login/Registro</a>
+      </nav>
+      <hr/>
+      <div class="hint">UI estática em HTML/CSS. Conecte ao Java via JSP/Thymeleaf/Servlet.</div>
+    </aside>
+    <div>
+      <header class="header">
+        <div class="search">
+          <input aria-label="Busca" placeholder="Buscar..."/>
+          <button class="btn secondary" type="button">Buscar</button>
+        </div>
+        <div class="user"><span class="badge">Aluno</span><div class="avatar" aria-hidden="true"></div></div>
+      </header>
+      <main class="main">
+        
+<section class="panel">
+  <div class="toolbar">
+    <h2>Projetos Ativos</h2>
+    <div class="actions">
+      <a class="btn" href="project-form.html">Novo Projeto</a>
+      <a class="btn secondary" href="projects.html">Ver todos</a>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><small>Projetos</small><h3 data-bind="projectsCount">8</h3><small class="hint">Último mês</small></div>
+    <div class="stat"><small>Tarefas Abertas</small><h3 data-bind="tasksOpen">32</h3><small class="hint">+6 pendentes</small></div>
+    <div class="stat"><small>Entregas Semana</small><h3 data-bind="dueThisWeek">5</h3><small class="hint">ver prazos</small></div>
+    <div class="stat"><small>Produtividade</small><h3 data-bind="productivityScore">86%</h3><small class="hint">estimativa</small></div>
+  </div>
+</section>
+<section class="grid cols-2">
+  <div class="panel">
+    <h3>Prazos Próximos</h3>
+    <table class="table">
+      <thead><tr><th>Projeto</th><th>Tarefa</th><th>Prazo</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Website ACME</td><td>Landing v2</td><td>21/08</td><td><span class="badge warn">Hoje</span></td></tr>
+        <tr><td>App Mobile</td><td>API Auth</td><td>23/08</td><td><span class="badge">Em andamento</span></td></tr>
+        <tr><td>ERP Interno</td><td>Relatório Vendas</td><td>26/08</td><td><span class="badge">A revisar</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel">
+    <h3>Minhas Tarefas</h3>
+    <ul>
+      <li>Implementar endpoint /login (ERP)</li>
+      <li>Revisar UI relatórios (Website)</li>
+      <li>Definir colunas kanban (Mobile)</li>
+    </ul>
+  </div>
+</section>
+
+      </main>
+      <div class="footer">© Dashboard — UI mínima</div>
+    </div>
+  </div>
+</body>
+</html>

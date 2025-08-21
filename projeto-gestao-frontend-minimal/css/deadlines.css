@@ -1,0 +1,15 @@
+/* deadlines specific (minimal) */
+
+body[data-page="deadlines"] .header {
+	margin-bottom: 1.2rem;
+}
+
+.panel .filters {
+	display: flex;
+	gap: .7rem;
+	margin-bottom: 1rem;
+}
+.panel .filters input[type="date"],
+.panel .filters select {
+	min-width: 120px;
+}

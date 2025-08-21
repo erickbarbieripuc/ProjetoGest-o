@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Atribuição de Tarefas · Sistema de Gestão de Projetos</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/assignments.css"/>
+  <meta name="color-scheme" content="dark light"/>
+</head>
+<body data-page="assignments">
+  <div class="container">
+    <aside class="aside">
+      <div class="brand"><div class="dot"></div><h1>Gestão de Projetos</h1></div>
+      <nav class="nav">
+        <div class="section">Navegação</div>
+        <a href="index.html" class="">Dashboard</a>
+        <a href="projects.html" class="">Projetos</a>
+        <a href="project-form.html" class="">Criar/Editar Projeto</a>
+        <a href="project-detail.html" class="">Detalhe do Projeto</a>
+        <a href="task-form.html" class="">Criar/Editar Tarefa</a>
+        <a href="kanban.html" class="">Kanban</a>
+        <a href="assignments.html" class="active">Atribuição de Tarefas</a>
+        <a href="deadlines.html" class="">Controle de Prazos</a>
+        <a href="reports.html" class="">Relatórios</a>
+        <a href="teams.html" class="">Equipes</a>
+        <a href="chat.html" class="">Chat</a>
+        <a href="profile.html" class="">Perfil</a>
+        <a href="project-settings.html" class="">Configurações do Projeto</a>
+        <a href="help.html" class="">Ajuda</a>
+        <a href="login.html" class="">Login/Registro</a>
+      </nav>
+      <hr/>
+      <div class="hint">UI estática em HTML/CSS. Conecte ao Java via JSP/Thymeleaf/Servlet.</div>
+    </aside>
+    <div>
+      <header class="header">
+        <div class="search">
+          <input aria-label="Busca" placeholder="Buscar..."/>
+          <button class="btn secondary" type="button">Buscar</button>
+        </div>
+        <div class="user"><span class="badge">Aluno</span><div class="avatar" aria-hidden="true"></div></div>
+      </header>
+      <main class="main">
+        
+<section class="panel">
+  <div class="toolbar">
+    <h2>Atribuir/Reatribuir</h2>
+    <div class="filters">
+      <select><option>Todos</option><option>Sem responsável</option><option>Meus</option></select>
+    </div>
+  </div>
+  <table class="table">
+    <thead><tr><th>Tarefa</th><th>Atual</th><th>Novo Responsável</th><th>Ação</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Landing v2</td><td>João</td>
+        <td><input placeholder="Digite um usuário" list="users"/></td>
+        <td><button class="btn">Atribuir</button></td>
+      </tr>
+      <tr>
+        <td>API Auth</td><td>Maria</td>
+        <td><input placeholder="Digite um usuário" list="users"/></td>
+        <td><button class="btn">Atribuir</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <datalist id="users"><option>Ana</option><option>João</option><option>Maria</option></datalist>
+</section>
+
+      </main>
+      <div class="footer">© Atribuição de Tarefas — UI mínima</div>
+    </div>
+  </div>
+</body>
+</html>

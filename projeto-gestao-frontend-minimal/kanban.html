@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Kanban de Tarefas · Sistema de Gestão de Projetos</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/kanban.css"/>
+  <meta name="color-scheme" content="dark light"/>
+</head>
+<body data-page="kanban">
+  <div class="container">
+    <aside class="aside">
+      <div class="brand"><div class="dot"></div><h1>Gestão de Projetos</h1></div>
+      <nav class="nav">
+        <div class="section">Navegação</div>
+        <a href="index.html" class="">Dashboard</a>
+        <a href="projects.html" class="">Projetos</a>
+        <a href="project-form.html" class="">Criar/Editar Projeto</a>
+        <a href="project-detail.html" class="">Detalhe do Projeto</a>
+        <a href="task-form.html" class="">Criar/Editar Tarefa</a>
+        <a href="kanban.html" class="active">Kanban</a>
+        <a href="assignments.html" class="">Atribuição de Tarefas</a>
+        <a href="deadlines.html" class="">Controle de Prazos</a>
+        <a href="reports.html" class="">Relatórios</a>
+        <a href="teams.html" class="">Equipes</a>
+        <a href="chat.html" class="">Chat</a>
+        <a href="profile.html" class="">Perfil</a>
+        <a href="project-settings.html" class="">Configurações do Projeto</a>
+        <a href="help.html" class="">Ajuda</a>
+        <a href="login.html" class="">Login/Registro</a>
+      </nav>
+      <hr/>
+      <div class="hint">UI estática em HTML/CSS. Conecte ao Java via JSP/Thymeleaf/Servlet.</div>
+    </aside>
+    <div>
+      <header class="header">
+        <div class="search">
+          <input aria-label="Busca" placeholder="Buscar..."/>
+          <button class="btn secondary" type="button">Buscar</button>
+        </div>
+        <div class="user"><span class="badge">Aluno</span><div class="avatar" aria-hidden="true"></div></div>
+      </header>
+      <main class="main">
+        
+<section class="panel">
+  <div class="toolbar">
+    <h2>Kanban</h2>
+    <div class="actions"><a class="btn secondary" href="project-detail.html">Voltar ao projeto</a></div>
+  </div>
+  <div class="kanban" data-project-id="1">
+    <div class="col" id="backlog"><h4>Backlog</h4>
+      <div class="card" data-task-id="t1">Landing v2</div>
+      <div class="card" data-task-id="t2">Criar wireframes</div>
+    </div>
+    <div class="col" id="doing"><h4>Fazendo</h4>
+      <div class="card" data-task-id="t3">API Auth</div>
+    </div>
+    <div class="col" id="review"><h4>Revisão</h4>
+      <div class="card" data-task-id="t4">UI Header</div>
+    </div>
+    <div class="col" id="done"><h4>Concluída</h4>
+      <div class="card" data-task-id="t5">Setup projeto</div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <div class="footer">© Kanban de Tarefas — UI mínima</div>
+    </div>
+  </div>
+</body>
+</html>

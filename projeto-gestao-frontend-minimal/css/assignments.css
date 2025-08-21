@@ -1,0 +1,22 @@
+/* assignments specific (minimal) */
+
+/* Ajustes de espaçamento para a tela de atribuição */
+.panel {
+	margin-top: 1.2rem;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.toolbar {
+	margin-bottom: 1rem;
+}
+
+.filters {
+	min-width: 180px;
+}
+
+input[list] {
+	margin-bottom: 0;
+}
