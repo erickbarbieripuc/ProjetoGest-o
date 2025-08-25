@@ -1,3 +1,7 @@
+/* Espaçamento superior para o primeiro painel principal em todas as páginas */
+body .main > .panel:first-child {
+  margin-top: 1.2rem;
+}
 /* Base minimal */
 :root{
   --bg:#0b1020; --surface:#121830; --surface-2:#1a2142; --text:#e7eaf6; --muted:#a8b2d1;
@@ -33,7 +37,25 @@ button,.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4
 .nav .section{margin:.6rem 0 .3rem .4rem;font-size:.75rem;letter-spacing:.06em;color:#8da2ff;text-transform:uppercase}
 
 .header{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.6rem .8rem;display:flex;gap:.6rem;align-items:center;justify-content:space-between}
-.header .search{flex:1;max-width:560px;display:flex;gap:.4rem}
+.header .search {
+  flex: 1;
+  max-width: 420px;
+  min-width: 220px;
+  display: flex;
+  gap: .4rem;
+  align-items: center;
+}
+.header .search input {
+  flex: 1 1 0%;
+  min-width: 0;
+  max-width: 100%;
+}
+.header .search button, .header .search .btn {
+  flex: 0 0 auto;
+  min-width: 90px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .header .search input{flex:1}
 .header .user{display:flex;align-items:center;gap:.6rem}
 .avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent))}

@@ -1,8 +1,5 @@
 /* reports specific (minimal) */
 
-body[data-page="reports"] .header {
-	margin-bottom: 1.2rem;
-}
 
 .panel .metrics {
 	display: flex;

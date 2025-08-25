@@ -1,8 +1,6 @@
 /* project-detail specific (minimal) */
 
-body[data-page="project-detail"] .header {
-	margin-bottom: 1.2rem;
-}
+
 
 .panel .actions .btn,
 .panel .actions .btn.secondary {

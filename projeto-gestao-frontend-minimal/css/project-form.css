@@ -1,8 +1,5 @@
 /* project-form specific (minimal) */
 
-body[data-page="project-form"] .header {
-	margin-bottom: 1.2rem;
-}
 
 form.panel {
 	max-width: 600px;
@@ -22,9 +19,7 @@ form.panel {
 	flex: 1 1 220px;
 	min-width: 180px;
 }
-textarea, input {
-	font-size: 1rem;
-}
+/* Removido para padronização global do menu de busca */
 button, .btn {
 	min-width: 120px;
 }

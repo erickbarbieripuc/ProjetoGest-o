@@ -1,9 +1,5 @@
 /* deadlines specific (minimal) */
 
-body[data-page="deadlines"] .header {
-	margin-bottom: 1.2rem;
-}
-
 .panel .filters {
 	display: flex;
 	gap: .7rem;

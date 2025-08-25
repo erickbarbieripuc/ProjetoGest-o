@@ -2,7 +2,7 @@
 
 /* Ajustes de espaçamento para a tela de atribuição */
 .panel {
-	margin-top: 1.2rem;
+		/* margin-top removido para padronização global */
 }
 
 .table th, .table td {
