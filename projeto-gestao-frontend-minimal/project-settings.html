@@ -43,18 +43,111 @@
       </header>
       <main class="main">
         
+<!-- Settings Header -->
+<div class="settings-header">
+  <div class="settings-title">⚙️ Configurações do Projeto</div>
+  <div class="settings-subtitle">Gerencie as configurações avançadas do seu projeto</div>
+</div>
+
+<!-- Project Settings Form -->
 <form class="panel" method="post" action="/projects/settings">
-  <h2>Configurações</h2>
-  <div class="form-row">
-    <div class="col-4"><label>Status</label><select><option>Ativo</option><option>Planejamento</option><option>Arquivado</option></select></div>
-    <div class="col-4"><label>Visibilidade</label><select><option>Privado</option><option>Público</option></select></div>
-    <div class="col-4"><label>Etiquetas (comma-separated)</label><input/></div>
-    <div class="col-12"><label>Colunas Kanban (comma-separated)</label><input placeholder="Backlog, Fazendo, Revisão, Concluída"/></div>
+  <h2>🔧 Configurações Gerais</h2>
+  
+  <div class="settings-section">
+    <h3>📊 Status e Visibilidade</h3>
+    <div class="settings-grid">
+      <div class="setting-item">
+        <div class="setting-label">Status do Projeto</div>
+        <div class="setting-description">Define o estado atual do projeto</div>
+        <select name="status">
+          <option value="active">🟢 Ativo</option>
+          <option value="planning">🔵 Planejamento</option>
+          <option value="archived">📁 Arquivado</option>
+          <option value="paused">⏸️ Pausado</option>
+        </select>
+      </div>
+      
+      <div class="setting-item">
+        <div class="setting-label">Visibilidade</div>
+        <div class="setting-description">Controla quem pode ver este projeto</div>
+        <select name="visibility">
+          <option value="private">🔒 Privado</option>
+          <option value="team">👥 Equipe</option>
+          <option value="public">🌐 Público</option>
+        </select>
+      </div>
+    </div>
   </div>
-  <div style="display:flex; gap:.6rem; justify-content:flex-end; margin-top:.6rem">
-    <button class="btn">Salvar</button>
+
+  <div class="settings-section">
+    <h3>🏷️ Tags e Categorização</h3>
+    <div class="form-row">
+      <div class="col-12">
+        <label>Etiquetas do Projeto</label>
+        <input name="tags" placeholder="frontend, backend, mobile, design" />
+        <div class="tag-list">
+          <span class="tag">Frontend</span>
+          <span class="tag">Backend</span>
+          <span class="tag">API</span>
+          <span class="tag">Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-section">
+    <h3>📋 Configurações do Kanban</h3>
+    <div class="form-row">
+      <div class="col-12">
+        <label>Colunas do Kanban</label>
+        <input name="kanban_columns" placeholder="Backlog, Em Progresso, Revisão, Concluído" />
+        <div class="kanban-columns">
+          <div class="kanban-column-preview">📝 Backlog</div>
+          <div class="kanban-column-preview">⚡ Em Progresso</div>
+          <div class="kanban-column-preview">👀 Revisão</div>
+          <div class="kanban-column-preview">✅ Concluído</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-section">
+    <h3>🔔 Notificações</h3>
+    <div class="settings-grid">
+      <div class="setting-item">
+        <div class="setting-label">Notificações por E-mail</div>
+        <div class="setting-description">Receber notificações sobre atualizações do projeto</div>
+        <label class="toggle-switch">
+          <input type="checkbox" name="email_notifications" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      
+      <div class="setting-item">
+        <div class="setting-label">Notificações Push</div>
+        <div class="setting-description">Notificações instantâneas no navegador</div>
+        <label class="toggle-switch">
+          <input type="checkbox" name="push_notifications">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button class="btn secondary" type="button">❌ Cancelar</button>
+    <button class="btn primary" type="submit">💾 Salvar Configurações</button>
   </div>
 </form>
+
+<!-- Danger Zone -->
+<div class="panel danger-zone">
+  <h3>⚠️ Zona de Perigo</h3>
+  <p>As ações abaixo são irreversíveis. Proceda com cuidado.</p>
+  <div class="btn-group">
+    <button class="btn danger" type="button">🗑️ Excluir Projeto</button>
+  </div>
+</div>
 
       </main>
 

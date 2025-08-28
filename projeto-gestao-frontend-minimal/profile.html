@@ -43,16 +43,81 @@
       </header>
       <main class="main">
         
+<div class="profile-header">
+  <h1 class="profile-title">👤 Meu Perfil</h1>
+  <p class="profile-subtitle">Gerencie suas informações pessoais e preferências</p>
+</div>
+
 <form class="panel" method="post" action="/profile/save">
-  <h2>Perfil</h2>
-  <div class="form-row">
-    <div class="col-6"><label>Nome</label><input name="name"/></div>
-    <div class="col-6"><label>Idioma</label><select name="lang"><option>pt-BR</option><option>en-US</option></select></div>
-    <div class="col-6"><label>Avatar (URL)</label><input name="avatar"/></div>
-    <div class="col-6"><label>Notificações</label><select name="notif"><option>Ativar</option><option>Desativar</option></select></div>
+  <h2>⚙️ Configurações do Perfil</h2>
+  
+  <div class="profile-avatar">
+    <div class="avatar-display">👤</div>
+    <p style="color: var(--muted); margin: 0;">Foto do perfil atual</p>
   </div>
-  <div style="display:flex; gap:.6rem; justify-content:flex-end; margin-top:.6rem">
-    <button class="btn">Salvar</button>
+  
+  <div class="form-section">
+    <h3 class="section-title">📝 Informações Pessoais</h3>
+    <div class="form-row">
+      <div class="col-6">
+        <label>👤 Nome Completo</label>
+        <input name="name" placeholder="Seu nome completo" value="João Silva"/>
+      </div>
+      <div class="col-6">
+        <label>📧 Email</label>
+        <input name="email" type="email" placeholder="seu@email.com" value="joao@empresa.com" readonly/>
+      </div>
+      <div class="col-6">
+        <label>🖼️ Avatar (URL)</label>
+        <input name="avatar" placeholder="https://exemplo.com/avatar.jpg"/>
+      </div>
+      <div class="col-6">
+        <label>💼 Cargo</label>
+        <input name="position" placeholder="Ex: Desenvolvedor Senior"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3 class="section-title">🌍 Preferências</h3>
+    <div class="form-row">
+      <div class="col-6">
+        <label>🌐 Idioma</label>
+        <select name="lang">
+          <option>🇧🇷 Português (Brasil)</option>
+          <option>🇺🇸 English (US)</option>
+          <option>🇪🇸 Español</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label>🔔 Notificações</label>
+        <select name="notif">
+          <option>🔔 Ativar todas</option>
+          <option>📧 Apenas email</option>
+          <option>🔕 Desativar</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label>🎨 Tema</label>
+        <select name="theme">
+          <option>🌙 Escuro</option>
+          <option>☀️ Claro</option>
+          <option>🔄 Automático</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label>⏰ Fuso Horário</label>
+        <select name="timezone">
+          <option>🇧🇷 América/São_Paulo</option>
+          <option>🇺🇸 America/New_York</option>
+          <option>🇬🇧 Europe/London</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button class="btn" type="submit">💾 Salvar Alterações</button>
   </div>
 </form>
 

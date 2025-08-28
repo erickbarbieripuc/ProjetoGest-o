@@ -1,11 +1,284 @@
-/* deadlines specific (minimal) */
+/* Deadlines Professional Design */
 
+.deadlines-header {
+	background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+	border-radius: 20px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.deadlines-header::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	right: -50%;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+	border-radius: 50%;
+}
+
+.deadlines-title {
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin: 0 0 0.5rem 0;
+}
+
+.deadlines-subtitle {
+	font-size: 1.1rem;
+	opacity: 0.9;
+	margin: 0;
+}
+
+.deadlines-panel {
+	background: linear-gradient(135deg, var(--surface) 0%, rgba(255, 107, 107, 0.03) 100%);
+	border: 1px solid rgba(255, 107, 107, 0.2);
+	border-radius: 20px;
+	padding: 2.5rem;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+
+.deadlines-panel::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, #ff6b6b, #ee5a52);
+}
+
+.deadlines-panel h2 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 0 0 2rem 0;
+}
+
+.summary-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.summary-card {
+	background: rgba(255, 107, 107, 0.05);
+	border: 1px solid rgba(255, 107, 107, 0.15);
+	border-radius: 16px;
+	padding: 1.5rem;
+	text-align: center;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.summary-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: linear-gradient(90deg, #ff6b6b, #ee5a52);
+}
+
+.summary-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(255, 107, 107, 0.15);
+}
+
+.summary-number {
+	font-size: 2rem;
+	font-weight: 800;
+	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.summary-label {
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: #ff6b6b;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.deadlines-toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	background: rgba(255, 107, 107, 0.05);
+	border-radius: 12px;
+	border: 1px solid rgba(255, 107, 107, 0.15);
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.filter-group {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.date-input,
+.project-select {
+	padding: 0.6rem 1rem;
+	border: 2px solid rgba(255, 107, 107, 0.2);
+	border-radius: 8px;
+	background: var(--surface);
+	color: var(--text);
+	font-size: 0.9rem;
+	transition: all 0.3s ease;
+	min-width: 120px;
+}
+
+.date-input:focus,
+.project-select:focus {
+	outline: none;
+	border-color: #ff6b6b;
+	box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+.apply-filter-btn {
+	padding: 0.6rem 1.2rem;
+	border-radius: 8px;
+	font-weight: 600;
+	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	color: white;
+	border: none;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.apply-filter-btn:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.deadlines-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+	background: var(--surface);
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.deadlines-table th {
+	background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(238, 90, 82, 0.1));
+	padding: 1.2rem;
+	text-align: left;
+	font-weight: 600;
+	color: #ff6b6b;
+	border-bottom: 2px solid rgba(255, 107, 107, 0.2);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.deadlines-table td {
+	padding: 1.2rem;
+	border-bottom: 1px solid rgba(255, 107, 107, 0.1);
+	transition: all 0.3s ease;
+	vertical-align: middle;
+}
+
+.deadlines-table tr:hover td {
+	background: rgba(255, 107, 107, 0.05);
+}
+
+.alert-badge {
+	padding: 0.4rem 0.8rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.alert-critical {
+	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	color: white;
+}
+
+.alert-warning {
+	background: linear-gradient(135deg, #ffd43b, #fab005);
+	color: white;
+}
+
+.alert-upcoming {
+	background: linear-gradient(135deg, #4dabf7, #339af0);
+	color: white;
+}
+
+.overdue-highlight {
+	background: rgba(255, 107, 107, 0.1) !important;
+	border-left: 4px solid #ff6b6b !important;
+}
+
+.today-highlight {
+	background: rgba(255, 212, 59, 0.1) !important;
+	border-left: 4px solid #ffd43b !important;
+}
+
+/* Legacy compatibility */
 .panel .filters {
 	display: flex;
 	gap: .7rem;
 	margin-bottom: 1rem;
 }
+
 .panel .filters input[type="date"],
 .panel .filters select {
 	min-width: 120px;
+}
+
+@media (max-width: 768px) {
+	.deadlines-panel {
+		padding: 2rem 1.5rem;
+		margin: 1rem;
+	}
+	
+	.deadlines-toolbar {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	
+	.filter-group {
+		justify-content: center;
+	}
+	
+	.summary-cards {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 1rem;
+	}
+	
+	.deadlines-table {
+		font-size: 0.9rem;
+	}
+	
+	.deadlines-table th,
+	.deadlines-table td {
+		padding: 0.8rem;
+	}
 }

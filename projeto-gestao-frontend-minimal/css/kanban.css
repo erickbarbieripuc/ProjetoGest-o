@@ -1,10 +1,597 @@
-/* kanban specific (minimal) */
+/* Kanban Professional Design */
 
-.kanban-toolbar {
+.kanban-header {
+	background: linear-gradient(135deg, #4c6ef5 0%, #364fc7 100%);
+	border-radius: 20px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	color: white;
+	position: relative;
+	overflow: hidden;
 	display: flex;
-	gap: .7rem;
-	margin-bottom: 1rem;
+	justify-content: space-between;
+	align-items: center;
 }
+
+.kanban-header::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	right: -50%;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+	border-radius: 50%;
+}
+
+.kanban-title h1 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin: 0 0 0.5rem 0;
+}
+
+.kanban-title p {
+	font-size: 1.1rem;
+	opacity: 0.9;
+	margin: 0;
+}
+
+.kanban-stats {
+	display: flex;
+	gap: 2rem;
+	position: relative;
+}
+
+.stat-item {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 1rem;
+	border-radius: 12px;
+	min-width: 80px;
+}
+
+.stat-number {
+	font-size: 1.8rem;
+	font-weight: 800;
+	margin-bottom: 0.3rem;
+}
+
+.stat-label {
+	font-size: 0.8rem;
+	opacity: 0.9;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+
+.kanban-controls {
+	background: var(--surface);
+	border: 1px solid rgba(76, 110, 245, 0.2);
+	border-radius: 16px;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.control-group {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	flex: 1;
+}
+
+.control-group label {
+	font-weight: 600;
+	color: #4c6ef5;
+	font-size: 0.9rem;
+	white-space: nowrap;
+}
+
+.control-group select,
+.control-group input {
+	padding: 0.6rem 1rem;
+	border: 1px solid rgba(76, 110, 245, 0.3);
+	border-radius: 8px;
+	background: var(--surface);
+	color: var(--text);
+	font-size: 0.9rem;
+	transition: all 0.3s ease;
+}
+
+.control-group select:focus,
+.control-group input:focus {
+	outline: none;
+	border-color: #4c6ef5;
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.1);
+}
+
+.control-actions {
+	display: flex;
+	gap: 1rem;
+}
+
+.kanban-panel {
+	background: transparent;
+	border: none;
+	padding: 0;
+	box-shadow: none;
+}
+
+.kanban-container {
+	overflow-x: auto;
+	padding-bottom: 1rem;
+}
+
+.kanban {
+	display: flex;
+	gap: 1.5rem;
+	min-width: 1200px;
+	padding: 1rem 0;
+}
+
+.col {
+	flex: 1;
+	min-width: 300px;
+	background: var(--surface);
+	border: 1px solid rgba(76, 110, 245, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+}
+
+.col::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, #4c6ef5, #364fc7);
+}
+
+.col-header {
+	padding: 1.5rem;
+	border-bottom: 1px solid rgba(76, 110, 245, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(76, 110, 245, 0.05);
+}
+
+.col-header h4 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #4c6ef5;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.col-count {
+	font-size: 0.8rem;
+	background: rgba(76, 110, 245, 0.1);
+	color: #4c6ef5;
+	padding: 0.2rem 0.6rem;
+	border-radius: 12px;
+	font-weight: 600;
+}
+
+.col-actions {
+	position: relative;
+}
+
+.col-menu {
+	background: none;
+	border: none;
+	color: #4c6ef5;
+	font-size: 1.2rem;
+	cursor: pointer;
+	padding: 0.3rem;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+
+.col-menu:hover {
+	background: rgba(76, 110, 245, 0.1);
+}
+
+.col-content {
+	padding: 1rem;
+	min-height: 400px;
+}
+
+.card {
+	background: var(--surface);
+	border: 1px solid rgba(76, 110, 245, 0.2);
+	border-radius: 12px;
+	padding: 1.2rem;
+	margin-bottom: 1rem;
+	transition: all 0.3s ease;
+	cursor: grab;
+	position: relative;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(76, 110, 245, 0.15);
+	border-color: #4c6ef5;
+}
+
+.card.dragging {
+	opacity: 0.5;
+	transform: rotate(5deg);
+	cursor: grabbing;
+}
+
+.card.completed {
+	opacity: 0.8;
+	background: rgba(76, 110, 245, 0.05);
+}
+
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.8rem;
+}
+
+.card-priority {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+
+.priority-high {
+	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.priority-medium {
+	background: linear-gradient(135deg, #ffd43b, #fab005);
+}
+
+.priority-low {
+	background: linear-gradient(135deg, #51cf66, #40c057);
+}
+
+.card-menu {
+	background: none;
+	border: none;
+	color: var(--text-muted);
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 0.2rem;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+
+.card-menu:hover {
+	background: rgba(76, 110, 245, 0.1);
+	color: #4c6ef5;
+}
+
+.card-title {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--text);
+	margin-bottom: 0.5rem;
+	line-height: 1.4;
+}
+
+.card-description {
+	font-size: 0.9rem;
+	color: var(--text-muted);
+	margin-bottom: 1rem;
+	line-height: 1.5;
+}
+
+.card-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.8rem;
+}
+
+.card-assignee {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: var(--text);
+}
+
+.assignee-avatar {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #4c6ef5, #364fc7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+
+.card-due {
+	font-size: 0.8rem;
+	background: rgba(76, 110, 245, 0.1);
+	color: #4c6ef5;
+	padding: 0.2rem 0.6rem;
+	border-radius: 8px;
+	font-weight: 600;
+}
+
+.card-completed {
+	font-size: 0.8rem;
+	background: rgba(81, 207, 102, 0.1);
+	color: #40c057;
+	padding: 0.2rem 0.6rem;
+	border-radius: 8px;
+	font-weight: 600;
+}
+
+.card-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin-bottom: 0.8rem;
+}
+
+.tag {
+	background: rgba(76, 110, 245, 0.1);
+	color: #4c6ef5;
+	padding: 0.2rem 0.6rem;
+	border-radius: 8px;
+	font-size: 0.7rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.2px;
+}
+
+.card-progress {
+	margin-top: 0.8rem;
+	padding-top: 0.8rem;
+	border-top: 1px solid rgba(76, 110, 245, 0.1);
+}
+
+.progress-bar {
+	width: 100%;
+	height: 6px;
+	background: rgba(76, 110, 245, 0.1);
+	border-radius: 3px;
+	overflow: hidden;
+	margin-bottom: 0.4rem;
+}
+
+.progress-fill {
+	height: 100%;
+	background: linear-gradient(90deg, #4c6ef5, #364fc7);
+	border-radius: 3px;
+	transition: width 0.3s ease;
+}
+
+.progress-text {
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: #4c6ef5;
+}
+
+.card-review {
+	margin-top: 0.8rem;
+	padding-top: 0.8rem;
+	border-top: 1px solid rgba(76, 110, 245, 0.1);
+}
+
+.review-status {
+	font-size: 0.8rem;
+	background: rgba(255, 212, 59, 0.1);
+	color: #fab005;
+	padding: 0.2rem 0.6rem;
+	border-radius: 8px;
+	font-weight: 600;
+	display: inline-block;
+	margin-bottom: 0.3rem;
+}
+
+.review-assignee {
+	font-size: 0.8rem;
+	color: var(--text-muted);
+}
+
+.add-card-btn {
+	background: rgba(76, 110, 245, 0.1);
+	border: 2px dashed rgba(76, 110, 245, 0.3);
+	border-radius: 12px;
+	padding: 1rem;
+	text-align: center;
+	color: #4c6ef5;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.add-card-btn:hover {
+	background: rgba(76, 110, 245, 0.15);
+	border-color: #4c6ef5;
+}
+
+.col-content.drag-over {
+	background: rgba(76, 110, 245, 0.05);
+	border: 2px dashed #4c6ef5;
+}
+
+/* Modal Styles */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(4px);
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-content {
+	background: var(--surface);
+	border-radius: 20px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+	width: 90%;
+	max-width: 600px;
+	max-height: 90vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.modal-header {
+	background: linear-gradient(135deg, #4c6ef5, #364fc7);
+	color: white;
+	padding: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal-header h3 {
+	margin: 0;
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.modal-close {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1.5rem;
+	cursor: pointer;
+	padding: 0.2rem;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-body {
+	padding: 2rem;
+	max-height: 60vh;
+	overflow-y: auto;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+.form-group label {
+	display: block;
+	font-weight: 600;
+	color: #4c6ef5;
+	margin-bottom: 0.5rem;
+	font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid rgba(76, 110, 245, 0.3);
+	border-radius: 8px;
+	background: var(--surface);
+	color: var(--text);
+	font-size: 0.9rem;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+	outline: none;
+	border-color: #4c6ef5;
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.1);
+}
+
+.modal-footer {
+	background: rgba(76, 110, 245, 0.05);
+	padding: 1.5rem;
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+	border-top: 1px solid rgba(76, 110, 245, 0.1);
+}
+
+/* Legacy compatibility for old toolbar */
+.kanban-toolbar {
+	display: none;
+}
+
 .kanban-toolbar .btn {
 	min-width: 110px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.kanban-header {
+		flex-direction: column;
+		gap: 1.5rem;
+		text-align: center;
+	}
+	
+	.kanban-stats {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	
+	.kanban-controls {
+		flex-direction: column;
+		gap: 1rem;
+		align-items: stretch;
+	}
+	
+	.control-group {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0.5rem;
+	}
+	
+	.control-actions {
+		justify-content: center;
+	}
+	
+	.kanban {
+		min-width: auto;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	
+	.col {
+		min-width: auto;
+	}
+	
+	.modal-content {
+		width: 95%;
+		margin: 1rem;
+	}
+	
+	.form-row {
+		grid-template-columns: 1fr;
+	}
 }

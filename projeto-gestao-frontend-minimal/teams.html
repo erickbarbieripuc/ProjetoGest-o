@@ -43,31 +43,127 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <div class="toolbar">
-    <h2>Equipes</h2>
-    <div class="actions"><a class="btn" href="#new-team">Nova Equipe</a></div>
-  </div>
-  <table class="table">
-    <thead><tr><th>Equipe</th><th>Membros</th><th>Permissões</th><th>Ações</th></tr></thead>
-    <tbody>
-      <tr><td>Frontend</td><td>Ana, João</td><td>Editor</td><td><a class="btn secondary" href="#">Editar</a></td></tr>
-      <tr><td>Backend</td><td>Maria, Carlos</td><td>Admin</td><td><a class="btn secondary" href="#">Editar</a></td></tr>
-    </tbody>
-  </table>
-</section>
-<section class="panel" id="new-team">
-  <h3>Nova/Editar Equipe</h3>
-  <div class="form-row">
-    <div class="col-6"><label>Nome</label><input/></div>
-    <div class="col-6"><label>Permissão</label><select><option>Leitor</option><option>Editor</option><option>Admin</option></select></div>
-    <div class="col-12"><label>Membros (comma-separated)</label><input/></div>
-  </div>
-  <div style="display:flex; gap:.6rem; justify-content:flex-end; margin-top:.6rem">
-    <a class="btn secondary" href="#">Cancelar</a>
-    <button class="btn">Salvar</button>
-  </div>
-</section>
+	<header class="teams-header">
+		<h1 class="teams-title">Gerenciamento de Equipes</h1>
+		<p class="teams-subtitle">Organize suas equipes e defina permissões de acesso aos projetos</p>
+	</header>
+
+	<div class="teams-panel">
+		<div class="teams-toolbar">
+			<h2>Suas Equipes</h2>
+			<button type="button" class="new-team-btn" onclick="showTeamForm()">+ Nova Equipe</button>
+		</div>
+
+		<table class="teams-table">
+			<thead>
+				<tr>
+					<th>Nome da Equipe</th>
+					<th>Membros</th>
+					<th>Permissões</th>
+					<th>Criada em</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="team-name">Desenvolvimento Frontend</td>
+					<td>
+						<div class="team-members">
+							<span class="member-tag">Ana Silva</span>
+							<span class="member-tag">João Costa</span>
+						</div>
+					</td>
+					<td><span class="permission-badge permission-editor">Editor</span></td>
+					<td>15/01/2024</td>
+					<td>
+						<a href="#" class="btn btn-sm">Editar</a>
+						<a href="#" class="btn btn-sm secondary">Excluir</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="team-name">Desenvolvimento Backend</td>
+					<td>
+						<div class="team-members">
+							<span class="member-tag">Maria Santos</span>
+							<span class="member-tag">Carlos Lima</span>
+						</div>
+					</td>
+					<td><span class="permission-badge permission-admin">Admin</span></td>
+					<td>20/01/2024</td>
+					<td>
+						<a href="#" class="btn btn-sm">Editar</a>
+						<a href="#" class="btn btn-sm secondary">Excluir</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="team-name">QA e Testes</td>
+					<td>
+						<div class="team-members">
+							<span class="member-tag">Fernanda Reis</span>
+						</div>
+					</td>
+					<td><span class="permission-badge permission-reader">Leitor</span></td>
+					<td>25/01/2024</td>
+					<td>
+						<a href="#" class="btn btn-sm">Editar</a>
+						<a href="#" class="btn btn-sm secondary">Excluir</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="team-form" id="teamForm" style="display: none;">
+		<h3>Nova Equipe</h3>
+		
+		<div class="form-row">
+			<div class="col-6">
+				<label for="teamName">Nome da Equipe</label>
+				<input type="text" id="teamName" placeholder="Ex: Desenvolvimento Backend">
+			</div>
+			<div class="col-6">
+				<label for="teamPermission">Nível de Permissão</label>
+				<select id="teamPermission">
+					<option value="reader">Leitor</option>
+					<option value="editor">Editor</option>
+					<option value="admin">Admin</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="col-12">
+				<label for="teamDescription">Descrição</label>
+				<input type="text" id="teamDescription" placeholder="Breve descrição da equipe e suas responsabilidades">
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="col-6">
+				<label for="teamLead">Líder da Equipe</label>
+				<input type="text" id="teamLead" placeholder="Nome do líder responsável">
+			</div>
+			<div class="col-6">
+				<label for="teamMembers">Membros (separados por vírgula)</label>
+				<input type="text" id="teamMembers" placeholder="ana@email.com, joao@email.com">
+			</div>
+		</div>
+
+		<div class="form-actions">
+			<button type="submit" class="btn">Criar Equipe</button>
+			<button type="button" class="btn secondary" onclick="hideTeamForm()">Cancelar</button>
+		</div>
+	</div>
+
+	<script>
+		function showTeamForm() {
+			document.getElementById('teamForm').style.display = 'block';
+			document.getElementById('teamForm').scrollIntoView({ behavior: 'smooth' });
+		}
+
+		function hideTeamForm() {
+			document.getElementById('teamForm').style.display = 'none';
+		}
+	</script>
 
       </main>
 

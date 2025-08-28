@@ -43,42 +43,86 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <div class="toolbar">
-    <h2>Projetos Ativos</h2>
-    <div class="actions">
-      <a class="btn" href="project-form.html">Novo Projeto</a>
-      <a class="btn secondary" href="projects.html">Ver todos</a>
-    </div>
+<div class="dashboard-header">
+  <h1 class="dashboard-title">🚀 Dashboard</h1>
+  <p class="dashboard-subtitle">Bem-vindo ao seu centro de controle de projetos</p>
+</div>
+
+<div class="action-buttons">
+  <a class="btn" href="project-form.html">➕ Novo Projeto</a>
+  <a class="btn secondary" href="projects.html">📋 Ver Todos os Projetos</a>
+  <a class="btn secondary" href="task-form.html">📝 Nova Tarefa</a>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <small>📊 Total de Projetos</small>
+    <h3 data-bind="projectsCount">8</h3>
+    <small class="hint">Ativos no sistema</small>
   </div>
-  <div class="stats">
-    <div class="stat"><small>Projetos</small><h3 data-bind="projectsCount">8</h3><small class="hint">Último mês</small></div>
-    <div class="stat"><small>Tarefas Abertas</small><h3 data-bind="tasksOpen">32</h3><small class="hint">+6 pendentes</small></div>
-    <div class="stat"><small>Entregas Semana</small><h3 data-bind="dueThisWeek">5</h3><small class="hint">ver prazos</small></div>
-    <div class="stat"><small>Produtividade</small><h3 data-bind="productivityScore">86%</h3><small class="hint">estimativa</small></div>
+  <div class="stat">
+    <small>⚡ Tarefas Abertas</small>
+    <h3 data-bind="tasksOpen">32</h3>
+    <small class="hint">+6 pendentes</small>
   </div>
-</section>
-<section class="grid cols-2">
-  <div class="panel">
-    <h3>Prazos Próximos</h3>
+  <div class="stat">
+    <small>📅 Entregas Semana</small>
+    <h3 data-bind="dueThisWeek">5</h3>
+    <small class="hint">Prazos próximos</small>
+  </div>
+  <div class="stat">
+    <small>📈 Produtividade</small>
+    <h3 data-bind="productivityScore">86%</h3>
+    <small class="hint">Meta mensal</small>
+  </div>
+</div>
+
+<div class="dashboard-grid">
+  <div class="dashboard-panel">
+    <h3>⏰ Prazos Próximos</h3>
     <table class="table">
-      <thead><tr><th>Projeto</th><th>Tarefa</th><th>Prazo</th><th>Status</th></tr></thead>
+      <thead>
+        <tr>
+          <th>🎯 Projeto</th>
+          <th>📋 Tarefa</th>
+          <th>📅 Prazo</th>
+          <th>📊 Status</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr><td>Website ACME</td><td>Landing v2</td><td>21/08</td><td><span class="badge warn">Hoje</span></td></tr>
-        <tr><td>App Mobile</td><td>API Auth</td><td>23/08</td><td><span class="badge">Em andamento</span></td></tr>
-        <tr><td>ERP Interno</td><td>Relatório Vendas</td><td>26/08</td><td><span class="badge">A revisar</span></td></tr>
+        <tr>
+          <td>Website ACME</td>
+          <td>Landing v2</td>
+          <td>21/08</td>
+          <td><span class="badge warn">🔥 Hoje</span></td>
+        </tr>
+        <tr>
+          <td>App Mobile</td>
+          <td>API Auth</td>
+          <td>23/08</td>
+          <td><span class="badge">⚡ Em andamento</span></td>
+        </tr>
+        <tr>
+          <td>ERP Interno</td>
+          <td>Relatório Vendas</td>
+          <td>26/08</td>
+          <td><span class="badge">👀 A revisar</span></td>
+        </tr>
       </tbody>
     </table>
   </div>
-  <div class="panel">
-    <h3>Minhas Tarefas</h3>
-    <ul>
-      <li>Implementar endpoint /login (ERP)</li>
-      <li>Revisar UI relatórios (Website)</li>
-      <li>Definir colunas kanban (Mobile)</li>
+  
+  <div class="dashboard-panel">
+    <h3>✅ Minhas Tarefas</h3>
+    <ul class="dashboard-list">
+      <li>🔐 Implementar endpoint /login (ERP)</li>
+      <li>🎨 Revisar UI relatórios (Website)</li>
+      <li>📋 Definir colunas kanban (Mobile)</li>
+      <li>🧪 Criar testes unitários (API)</li>
+      <li>📱 Otimizar performance mobile</li>
     </ul>
   </div>
-</section>
+</div>
 
       </main>
 

@@ -43,30 +43,108 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <div class="toolbar">
-    <h2>Atribuir/Reatribuir</h2>
-    <div class="filters">
-      <select><option>Todos</option><option>Sem responsável</option><option>Meus</option></select>
-    </div>
-  </div>
-  <table class="table">
-    <thead><tr><th>Tarefa</th><th>Atual</th><th>Novo Responsável</th><th>Ação</th></tr></thead>
-    <tbody>
-      <tr>
-        <td>Landing v2</td><td>João</td>
-        <td><input placeholder="Digite um usuário" list="users"/></td>
-        <td><button class="btn">Atribuir</button></td>
-      </tr>
-      <tr>
-        <td>API Auth</td><td>Maria</td>
-        <td><input placeholder="Digite um usuário" list="users"/></td>
-        <td><button class="btn">Atribuir</button></td>
-      </tr>
-    </tbody>
-  </table>
-  <datalist id="users"><option>Ana</option><option>João</option><option>Maria</option></datalist>
-</section>
+	<header class="assignments-header">
+		<h1 class="assignments-title">Atribuição de Tarefas</h1>
+		<p class="assignments-subtitle">Gerencie responsabilidades e delegue tarefas para sua equipe</p>
+	</header>
+
+	<div class="assignments-panel">
+		<div class="assignments-toolbar">
+			<h2>Atribuir/Reatribuir Tarefas</h2>
+			<div class="filter-controls">
+				<select class="filter-select">
+					<option>Todas as tarefas</option>
+					<option>Sem responsável</option>
+					<option>Minhas tarefas</option>
+					<option>Em andamento</option>
+					<option>Pendentes</option>
+				</select>
+			</div>
+		</div>
+
+		<table class="assignments-table">
+			<thead>
+				<tr>
+					<th>Tarefa</th>
+					<th>Responsável Atual</th>
+					<th>Novo Responsável</th>
+					<th>Prioridade</th>
+					<th>Ação</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="task-name">Landing Page v2.0</td>
+					<td>
+						<span class="current-assignee">João Silva</span>
+					</td>
+					<td>
+						<input class="assignee-input" placeholder="Digite o nome do usuário" list="users"/>
+					</td>
+					<td>
+						<span class="priority-badge priority-high">Alta</span>
+					</td>
+					<td>
+						<button class="assign-btn">Atribuir</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="task-name">API de Autenticação</td>
+					<td>
+						<span class="current-assignee">Maria Santos</span>
+					</td>
+					<td>
+						<input class="assignee-input" placeholder="Digite o nome do usuário" list="users"/>
+					</td>
+					<td>
+						<span class="priority-badge priority-medium">Média</span>
+					</td>
+					<td>
+						<button class="assign-btn">Atribuir</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="task-name">Testes Unitários</td>
+					<td>
+						<span class="current-assignee">Não atribuída</span>
+					</td>
+					<td>
+						<input class="assignee-input" placeholder="Digite o nome do usuário" list="users"/>
+					</td>
+					<td>
+						<span class="priority-badge priority-low">Baixa</span>
+					</td>
+					<td>
+						<button class="assign-btn">Atribuir</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="task-name">Documentação API</td>
+					<td>
+						<span class="current-assignee">Ana Oliveira</span>
+					</td>
+					<td>
+						<input class="assignee-input" placeholder="Digite o nome do usuário" list="users"/>
+					</td>
+					<td>
+						<span class="priority-badge priority-medium">Média</span>
+					</td>
+					<td>
+						<button class="assign-btn">Atribuir</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<datalist id="users">
+			<option>Ana Oliveira</option>
+			<option>João Silva</option>
+			<option>Maria Santos</option>
+			<option>Pedro Costa</option>
+			<option>Carlos Lima</option>
+			<option>Fernanda Reis</option>
+		</datalist>
+	</div>
 
       </main>
 

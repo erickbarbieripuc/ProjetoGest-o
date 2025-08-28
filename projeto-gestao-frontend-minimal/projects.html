@@ -43,35 +43,74 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <div class="toolbar">
-    <h2>Projetos</h2>
+<div class="projects-header">
+  <h1 class="projects-title">📋 Gerenciar Projetos</h1>
+  <p class="projects-subtitle">Visualize, organize e controle todos os seus projetos</p>
+</div>
+
+<div class="projects-panel">
+  <div class="projects-toolbar">
+    <h2>Lista de Projetos</h2>
     <div class="filters">
-      <input placeholder="Buscar por nome..." name="q" data-bind="query"/>
+      <input placeholder="🔍 Buscar projetos..." name="q" data-bind="query"/>
       <select name="status">
-        <option value="">Todos os status</option>
-        <option>Ativo</option><option>Arquivado</option><option>Em planejamento</option>
+        <option value="">📊 Todos os status</option>
+        <option>🟢 Ativo</option>
+        <option>📁 Arquivado</option>
+        <option>🔵 Em planejamento</option>
       </select>
-      <button class="btn">Filtrar</button>
+      <button class="btn">🔍 Filtrar</button>
     </div>
-    <a class="btn" href="project-form.html">Novo Projeto</a>
+    <a class="new-project-btn" href="project-form.html">➕ Novo Projeto</a>
   </div>
-  <table class="table">
-    <thead><tr><th>Projeto</th><th>Dono</th><th>Início</th><th>Prazo</th><th>Status</th><th>Ações</th></tr></thead>
+  
+  <table class="projects-table">
+    <thead>
+      <tr>
+        <th>🎯 Projeto</th>
+        <th>👤 Responsável</th>
+        <th>📅 Início</th>
+        <th>⏰ Prazo</th>
+        <th>📊 Status</th>
+        <th>⚙️ Ações</th>
+      </tr>
+    </thead>
     <tbody id="projects-list">
       <tr>
-        <td>Website ACME</td><td>Ana</td><td>01/08</td><td>30/09</td>
-        <td><span class="badge success">Ativo</span></td>
-        <td><a href="project-detail.html" class="btn secondary">Abrir</a></td>
+        <td class="project-name">Website ACME</td>
+        <td class="project-owner">Ana Silva</td>
+        <td class="project-dates">01/08/2025</td>
+        <td class="project-dates">30/09/2025</td>
+        <td><span class="badge success">🟢 Ativo</span></td>
+        <td><a href="project-detail.html" class="action-btn">👁️ Visualizar</a></td>
       </tr>
       <tr>
-        <td>ERP Interno</td><td>João</td><td>10/07</td><td>15/10</td>
-        <td><span class="badge">Planejamento</span></td>
-        <td><a href="project-detail.html" class="btn secondary">Abrir</a></td>
+        <td class="project-name">ERP Interno</td>
+        <td class="project-owner">João Santos</td>
+        <td class="project-dates">10/07/2025</td>
+        <td class="project-dates">15/10/2025</td>
+        <td><span class="badge info">🔵 Planejamento</span></td>
+        <td><a href="project-detail.html" class="action-btn">👁️ Visualizar</a></td>
+      </tr>
+      <tr>
+        <td class="project-name">App Mobile</td>
+        <td class="project-owner">Maria Costa</td>
+        <td class="project-dates">15/06/2025</td>
+        <td class="project-dates">20/08/2025</td>
+        <td><span class="badge warning">🟡 Em Revisão</span></td>
+        <td><a href="project-detail.html" class="action-btn">👁️ Visualizar</a></td>
+      </tr>
+      <tr>
+        <td class="project-name">Sistema de Vendas</td>
+        <td class="project-owner">Pedro Lima</td>
+        <td class="project-dates">01/09/2025</td>
+        <td class="project-dates">31/12/2025</td>
+        <td><span class="badge success">🟢 Ativo</span></td>
+        <td><a href="project-detail.html" class="action-btn">👁️ Visualizar</a></td>
       </tr>
     </tbody>
   </table>
-</section>
+</div>
 
       </main>
 
