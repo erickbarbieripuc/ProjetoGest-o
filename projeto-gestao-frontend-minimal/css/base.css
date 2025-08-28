@@ -1,6 +1,41 @@
 /* Espaçamento superior para o primeiro painel principal em todas as páginas */
-body .main > .panel:first-child {
-  margin-top: 1.2rem;
+body .main > .panel:first-child,
+body .main > .project-form-header,
+body .main > .task-form-header,
+body .main > .project-detail-header,
+body .main > .settings-header,
+body .main > .kanban-header,
+body .main > .reports-header,
+body .main > .dashboard-header,
+body .main > .projects-header,
+body .main > .assignments-header,
+body .main > .deadlines-header,
+body .main > .help-header,
+body .main > .teams-header,
+body .main > .profile-header,
+body .main > .chat-header,
+body .main > section:first-child,
+body .main > form:first-child,
+body .main > div:first-child {
+  margin-top: 2rem;
+}
+
+/* Espaçamento adicional para headers animados */
+.project-form-header,
+.task-form-header,
+.project-detail-header,
+.settings-header,
+.kanban-header,
+.reports-header,
+.dashboard-header,
+.projects-header,
+.assignments-header,
+.deadlines-header,
+.help-header,
+.teams-header,
+.profile-header,
+.chat-header {
+  margin-top: 2rem;
 }
 /* Base minimal */
 :root{
@@ -60,7 +95,7 @@ button,.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4
 .header .user{display:flex;align-items:center;gap:.6rem}
 .avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent))}
 
-.main{display:flex;flex-direction:column;gap:.8rem}
+.main{display:flex;flex-direction:column;gap:.8rem;padding-top:1rem}
 .panel{
   background:var(--surface);
   border:1px solid var(--border);

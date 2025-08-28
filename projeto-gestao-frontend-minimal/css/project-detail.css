@@ -166,7 +166,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	gap: 1.5rem;
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 }
 
 .progress-item {
@@ -354,14 +354,14 @@
 	border: 1px solid rgba(151, 117, 250, 0.15);
 	border-radius: 12px;
 	padding: 1.5rem;
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 }
 
 .team-members {
 	display: flex;
 	gap: 1rem;
 	flex-wrap: wrap;
-	margin-top: 1rem;
+	margin-top: 2rem;
 }
 
 .team-member {

@@ -12,7 +12,12 @@
 	animation: gradientShift 4s ease infinite;
 }
 
-.settings-header::before {
+.setting.tags-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 2rem;
+}er::before {
 	content: '';
 	position: absolute;
 	top: -50%;
@@ -355,7 +360,7 @@ input:checked + .toggle-slider:before {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
-	margin-top: 0.5rem;
+	margin-top: 2rem;
 }
 
 .tag {
@@ -373,7 +378,7 @@ input:checked + .toggle-slider:before {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 1rem;
-	margin-top: 1rem;
+	margin-top: 2rem;
 }
 
 .kanban-column-preview {
