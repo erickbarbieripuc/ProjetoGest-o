@@ -22,7 +22,8 @@
     </div>
     
     <div class="body" id="login">
-      <form method="post" action="/login" data-form="login">
+
+      <form method="post" action="/login" data-form="login" onsubmit="event.preventDefault(); window.location.href='index.html';">
         <div class="form-group">
           <label for="email">📧 E-mail</label>
           <input id="email" name="email" type="email" autocomplete="username" required placeholder="seu@email.com"/>
