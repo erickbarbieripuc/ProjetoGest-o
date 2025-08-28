@@ -110,7 +110,7 @@ body[data-page="login"] {
 	display: block;
 	margin: 0 0 0.5rem 0;
 	font-weight: 600;
-	color: #667eea;
+	color: #4c51bf;
 	font-size: 0.9rem;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -123,11 +123,16 @@ body[data-page="login"] {
 	padding: 1rem 1.2rem;
 	border: 2px solid rgba(102, 126, 234, 0.2);
 	border-radius: 12px;
-	background: rgba(255, 255, 255, 0.8);
-	color: var(--text);
+	background: rgba(255, 255, 255, 0.9);
+	color: #2d3748;
 	font-size: 1rem;
 	transition: all 0.3s ease;
 	box-sizing: border-box;
+}
+
+.auth input::placeholder {
+	color: #a0aec0;
+	opacity: 0.8;
 }
 
 .auth input:focus {
@@ -135,6 +140,30 @@ body[data-page="login"] {
 	border-color: #667eea;
 	box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
 	background: white;
+	color: #1a202c;
+}
+
+.auth input:focus::placeholder {
+	color: #cbd5e0;
+	opacity: 0.6;
+}
+
+/* Estilo quando o input tem valor */
+.auth input:not(:placeholder-shown) {
+	color: #1a202c;
+	font-weight: 500;
+}
+
+/* Estilo quando o input está vazio */
+.auth input:placeholder-shown {
+	color: #a0aec0;
+}
+
+/* Melhoria adicional para legibilidade */
+.auth input[type="password"]:not(:placeholder-shown) {
+	color: #1a202c;
+	font-weight: 600;
+	letter-spacing: 2px;
 }
 
 .auth input[type="checkbox"] {
