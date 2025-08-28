@@ -1,7 +1,7 @@
 /* Help Professional Design */
 
 .help-header {
-	background: linear-gradient(135deg, #4dabf7 0%, #339af0 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	border-radius: 20px;
 	padding: 2rem;
 	margin: 2rem 0;
@@ -37,7 +37,7 @@
 }
 
 .help-panel {
-	background: linear-gradient(135deg, var(--surface) 0%, rgba(77, 171, 247, 0.03) 100%);
+	background: linear-gradient(135deg, var(--surface) 0%, rgba(151, 117, 250, 0.03) 100%);
 	border: 1px solid rgba(77, 171, 247, 0.2);
 	border-radius: 20px;
 	padding: 2.5rem;
@@ -54,13 +54,13 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #4dabf7, #339af0);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .help-panel h2,
 .help-panel h3 {
 	font-weight: 700;
-	background: linear-gradient(135deg, #4dabf7, #339af0);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -85,7 +85,7 @@
 	padding: 1.5rem;
 	background: rgba(77, 171, 247, 0.05);
 	border-radius: 12px;
-	border-left: 4px solid #4dabf7;
+	border-left: 4px solid #9775fa;
 }
 
 .faq-list {
@@ -107,13 +107,13 @@
 	background: rgba(77, 171, 247, 0.08);
 	border-color: rgba(77, 171, 247, 0.25);
 	transform: translateY(-2px);
-	box-shadow: 0 4px 20px rgba(77, 171, 247, 0.1);
+	box-shadow: 0 4px 20px rgba(151, 117, 250, 0.1);
 }
 
 .faq-question {
 	font-weight: 700;
 	font-size: 1.1rem;
-	color: #4dabf7;
+	color: #9775fa;
 	margin: 0 0 0.8rem 0;
 	display: flex;
 	align-items: center;
@@ -132,7 +132,7 @@
 }
 
 .help-section {
-	background: linear-gradient(135deg, var(--surface) 0%, rgba(77, 171, 247, 0.03) 100%);
+	background: linear-gradient(135deg, var(--surface) 0%, rgba(151, 117, 250, 0.03) 100%);
 	border: 1px solid rgba(77, 171, 247, 0.2);
 	border-radius: 20px;
 	padding: 2.5rem;
@@ -149,11 +149,11 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #4dabf7, #339af0);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .contact-info {
-	background: linear-gradient(135deg, rgba(77, 171, 247, 0.1), rgba(51, 154, 240, 0.05));
+	background: linear-gradient(135deg, rgba(151, 117, 250, 0.1), rgba(132, 94, 247, 0.05));
 	border: 1px solid rgba(77, 171, 247, 0.2);
 	border-radius: 12px;
 	padding: 2rem;
@@ -168,14 +168,14 @@
 }
 
 .support-email {
-	color: #4dabf7;
+	color: #9775fa;
 	text-decoration: none;
 	font-weight: 600;
 	transition: all 0.3s ease;
 }
 
 .support-email:hover {
-	color: #339af0;
+	color: #845ef7;
 	text-decoration: underline;
 }
 
@@ -204,7 +204,7 @@
 	left: 0;
 	right: 0;
 	height: 3px;
-	background: linear-gradient(90deg, #4dabf7, #339af0);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .help-card:hover {
@@ -222,7 +222,7 @@
 .help-card-title {
 	font-size: 1.2rem;
 	font-weight: 700;
-	color: #4dabf7;
+	color: #9775fa;
 	margin: 0 0 1rem 0;
 }
 
@@ -245,12 +245,12 @@
 
 .search-help:focus {
 	outline: none;
-	border-color: #4dabf7;
+	border-color: #9775fa;
 	box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.2);
 }
 
 .search-help::placeholder {
-	color: #4dabf7;
+	color: #9775fa;
 	opacity: 0.7;
 }
 

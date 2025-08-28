@@ -1,10 +1,10 @@
 /* Project Settings Professional Design */
 
 .settings-header {
-	background: linear-gradient(135deg, #9775fa 0%, #845ef7 50%, #7950f2 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	border-radius: 20px;
 	padding: 2rem;
-	margin-bottom: 2rem;
+	margin: 2rem 0;
 	color: white;
 	position: relative;
 	overflow: hidden;
@@ -17,7 +17,9 @@
 	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin-top: 2rem;
-}er::before {
+}
+
+.settings-header::before {
 	content: '';
 	position: absolute;
 	top: -50%;
@@ -289,7 +291,7 @@ input:checked + .toggle-slider:before {
 }
 
 .btn.danger {
-	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
@@ -405,7 +407,7 @@ input:checked + .toggle-slider:before {
 }
 
 .danger-zone h3 {
-	color: #ff6b6b;
+	color: #9775fa;
 	font-size: 1.2rem;
 	font-weight: 700;
 	margin: 0 0 1rem 0;

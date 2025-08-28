@@ -1,7 +1,7 @@
 /* Chat Professional Design */
 
 .chat-header {
-	background: linear-gradient(135deg, #69db7c 0%, #51cf66 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	border-radius: 20px;
 	padding: 2rem;
 	margin: 2rem 0;
@@ -56,13 +56,13 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #69db7c, #51cf66);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .chat-panel h2 {
 	font-size: 1.8rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #69db7c, #51cf66);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -90,7 +90,7 @@
 
 .message-author {
 	display: inline-block;
-	background: linear-gradient(135deg, #69db7c, #51cf66);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 	padding: 0.3rem 0.8rem;
 	border-radius: 16px;
@@ -126,7 +126,7 @@
 
 .message-input:focus {
 	outline: none;
-	border-color: #69db7c;
+	border-color: #9775fa;
 	box-shadow: 0 0 0 3px rgba(105, 219, 124, 0.2);
 }
 
@@ -134,7 +134,7 @@
 	padding: 1rem 2rem;
 	border-radius: 12px;
 	font-weight: 600;
-	background: linear-gradient(135deg, #69db7c, #51cf66);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 	border: none;
 	transition: all 0.3s ease;
@@ -154,7 +154,7 @@
 	border-radius: 8px;
 	margin-top: 2rem;
 	font-size: 0.9rem;
-	color: #51cf66;
+	color: #845ef7;
 }
 
 @media (max-width: 768px) {

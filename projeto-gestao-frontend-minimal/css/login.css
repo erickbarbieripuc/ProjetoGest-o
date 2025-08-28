@@ -1,7 +1,7 @@
 /* Login Professional Design */
 
 body[data-page="login"] {
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -30,13 +30,13 @@ body[data-page="login"] {
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #667eea, #764ba2);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .auth-header {
 	text-align: center;
 	padding: 2rem 2rem 1rem 2rem;
-	background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+	background: linear-gradient(135deg, rgba(151, 117, 250, 0.1), rgba(132, 94, 247, 0.1));
 }
 
 .auth-logo {
@@ -47,7 +47,7 @@ body[data-page="login"] {
 .auth-title {
 	font-size: 2rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #667eea, #764ba2);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -83,8 +83,8 @@ body[data-page="login"] {
 
 .tabs a.active {
 	color: white;
-	background: linear-gradient(135deg, #667eea, #764ba2);
-	box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
+	box-shadow: 0 4px 15px rgba(151, 117, 250, 0.3);
 }
 
 .body {
@@ -196,9 +196,9 @@ body[data-page="login"] {
 }
 
 .auth .btn:not(.ghost) {
-	background: linear-gradient(135deg, #667eea, #764ba2);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
-	box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+	box-shadow: 0 4px 15px rgba(151, 117, 250, 0.3);
 }
 
 .auth .btn:not(.ghost):hover {

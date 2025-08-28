@@ -1,13 +1,15 @@
 /* Kanban Professional Design */
 
 .kanban-header {
-	background: linear-gradient(135deg, #4c6ef5 0%, #364fc7 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	border-radius: 20px;
 	padding: 2rem;
-	margin-bottom: 2rem;
+	margin: 2rem 0;
 	color: white;
 	position: relative;
 	overflow: hidden;
+	background-size: 200% 200%;
+	animation: gradientShift 4s ease infinite;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -22,6 +24,7 @@
 	height: 100%;
 	background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
 	border-radius: 50%;
+	animation: float 6s ease-in-out infinite;
 }
 
 .kanban-title h1 {
@@ -85,7 +88,7 @@
 
 .control-group label {
 	font-weight: 600;
-	color: #4c6ef5;
+	color: #9775fa;
 	font-size: 0.9rem;
 	white-space: nowrap;
 }
@@ -104,7 +107,7 @@
 .control-group select:focus,
 .control-group input:focus {
 	outline: none;
-	border-color: #4c6ef5;
+	border-color: #9775fa;
 	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.1);
 }
 
@@ -150,7 +153,7 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #4c6ef5, #364fc7);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .col-header {
@@ -165,7 +168,7 @@
 .col-header h4 {
 	font-size: 1.2rem;
 	font-weight: 700;
-	color: #4c6ef5;
+	color: #9775fa;
 	margin: 0;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -174,7 +177,7 @@
 .col-count {
 	font-size: 0.8rem;
 	background: rgba(76, 110, 245, 0.1);
-	color: #4c6ef5;
+	color: #9775fa;
 	padding: 0.2rem 0.6rem;
 	border-radius: 12px;
 	font-weight: 600;
@@ -187,7 +190,7 @@
 .col-menu {
 	background: none;
 	border: none;
-	color: #4c6ef5;
+	color: #9775fa;
 	font-size: 1.2rem;
 	cursor: pointer;
 	padding: 0.3rem;
@@ -219,7 +222,7 @@
 .card:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 8px 25px rgba(76, 110, 245, 0.15);
-	border-color: #4c6ef5;
+	border-color: #9775fa;
 }
 
 .card.dragging {
@@ -251,11 +254,11 @@
 }
 
 .priority-medium {
-	background: linear-gradient(135deg, #ffd43b, #fab005);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 }
 
 .priority-low {
-	background: linear-gradient(135deg, #51cf66, #40c057);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 }
 
 .card-menu {
@@ -271,7 +274,7 @@
 
 .card-menu:hover {
 	background: rgba(76, 110, 245, 0.1);
-	color: #4c6ef5;
+	color: #9775fa;
 }
 
 .card-title {
@@ -309,7 +312,7 @@
 	width: 24px;
 	height: 24px;
 	border-radius: 50%;
-	background: linear-gradient(135deg, #4c6ef5, #364fc7);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -321,7 +324,7 @@
 .card-due {
 	font-size: 0.8rem;
 	background: rgba(76, 110, 245, 0.1);
-	color: #4c6ef5;
+	color: #9775fa;
 	padding: 0.2rem 0.6rem;
 	border-radius: 8px;
 	font-weight: 600;
@@ -330,7 +333,7 @@
 .card-completed {
 	font-size: 0.8rem;
 	background: rgba(81, 207, 102, 0.1);
-	color: #40c057;
+	color: #845ef7;
 	padding: 0.2rem 0.6rem;
 	border-radius: 8px;
 	font-weight: 600;
@@ -345,7 +348,7 @@
 
 .tag {
 	background: rgba(76, 110, 245, 0.1);
-	color: #4c6ef5;
+	color: #9775fa;
 	padding: 0.2rem 0.6rem;
 	border-radius: 8px;
 	font-size: 0.7rem;
@@ -371,7 +374,7 @@
 
 .progress-fill {
 	height: 100%;
-	background: linear-gradient(90deg, #4c6ef5, #364fc7);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 	border-radius: 3px;
 	transition: width 0.3s ease;
 }
@@ -379,7 +382,7 @@
 .progress-text {
 	font-size: 0.8rem;
 	font-weight: 600;
-	color: #4c6ef5;
+	color: #9775fa;
 }
 
 .card-review {
@@ -391,7 +394,7 @@
 .review-status {
 	font-size: 0.8rem;
 	background: rgba(255, 212, 59, 0.1);
-	color: #fab005;
+	color: #845ef7;
 	padding: 0.2rem 0.6rem;
 	border-radius: 8px;
 	font-weight: 600;
@@ -410,7 +413,7 @@
 	border-radius: 12px;
 	padding: 1rem;
 	text-align: center;
-	color: #4c6ef5;
+	color: #9775fa;
 	font-weight: 600;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -418,12 +421,12 @@
 
 .add-card-btn:hover {
 	background: rgba(76, 110, 245, 0.15);
-	border-color: #4c6ef5;
+	border-color: #9775fa;
 }
 
 .col-content.drag-over {
 	background: rgba(76, 110, 245, 0.05);
-	border: 2px dashed #4c6ef5;
+	border: 2px dashed #9775fa;
 }
 
 /* Modal Styles */
@@ -453,7 +456,7 @@
 }
 
 .modal-header {
-	background: linear-gradient(135deg, #4c6ef5, #364fc7);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 	padding: 1.5rem;
 	display: flex;
@@ -501,7 +504,7 @@
 .form-group label {
 	display: block;
 	font-weight: 600;
-	color: #4c6ef5;
+	color: #9775fa;
 	margin-bottom: 0.5rem;
 	font-size: 0.9rem;
 }
@@ -524,7 +527,7 @@
 .form-group select:focus,
 .form-group textarea:focus {
 	outline: none;
-	border-color: #4c6ef5;
+	border-color: #9775fa;
 	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.1);
 }
 
@@ -594,4 +597,16 @@
 	.form-row {
 		grid-template-columns: 1fr;
 	}
+}
+
+/* Animações */
+@keyframes gradientShift {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+	0%, 100% { transform: translateY(0px) rotate(0deg); }
+	50% { transform: translateY(-20px) rotate(180deg); }
 }

@@ -1,10 +1,10 @@
 /* Project Detail Professional Design */
 
 .project-detail-header {
-	background: linear-gradient(135deg, #9775fa 0%, #845ef7 50%, #7950f2 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	border-radius: 20px;
 	padding: 2rem;
-	margin-bottom: 2rem;
+	margin: 2rem 0;
 	color: white;
 	position: relative;
 	overflow: hidden;
@@ -298,12 +298,12 @@
 }
 
 .priority-medium {
-	background: linear-gradient(135deg, #ffd43b, #fab005);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
 .priority-low {
-	background: linear-gradient(135deg, #51cf66, #40c057);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
@@ -322,12 +322,12 @@
 }
 
 .status-doing {
-	background: linear-gradient(135deg, #4dabf7, #339af0);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
 .status-done {
-	background: linear-gradient(135deg, #51cf66, #40c057);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 

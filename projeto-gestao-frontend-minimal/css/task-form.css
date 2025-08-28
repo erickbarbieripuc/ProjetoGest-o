@@ -1,10 +1,10 @@
 /* task-form specific - Professional Design */
 
 .task-form-header {
-	background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #4facfe 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	border-radius: 20px;
 	padding: 2rem;
-	margin-bottom: 2rem;
+	margin: 2rem 0;
 	color: white;
 	position: relative;
 	overflow: hidden;
@@ -82,13 +82,13 @@ form.panel::before {
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #4facfe, #00f2fe);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 form.panel h2 {
 	font-size: 2.2rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #4facfe, #00f2fe);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -134,7 +134,7 @@ form.panel h2 {
 	content: '';
 	width: 4px;
 	height: 20px;
-	background: linear-gradient(135deg, #4facfe, #00f2fe);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	border-radius: 2px;
 }
 

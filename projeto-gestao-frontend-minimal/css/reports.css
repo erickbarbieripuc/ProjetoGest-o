@@ -128,14 +128,14 @@
 }
 
 .metric-success {
-	background: linear-gradient(135deg, #51cf66, #40c057) !important;
+	background: linear-gradient(135deg, #9775fa, #845ef7) !important;
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 .metric-warning {
-	background: linear-gradient(135deg, #ffd43b, #fab005) !important;
+	background: linear-gradient(135deg, #9775fa, #845ef7) !important;
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -188,12 +188,12 @@
 }
 
 .progress-high {
-	background: linear-gradient(135deg, #51cf66, #40c057);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
 .progress-medium {
-	background: linear-gradient(135deg, #ffd43b, #fab005);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
@@ -276,7 +276,7 @@
 }
 
 .grid .card .badge.success {
-	background: linear-gradient(135deg, #51cf66, #40c057) !important;
+	background: linear-gradient(135deg, #9775fa, #845ef7) !important;
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;

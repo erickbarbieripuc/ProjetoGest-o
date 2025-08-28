@@ -2,7 +2,7 @@
 /* Teams Professional Design */
 
 .teams-header {
-	background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	border-radius: 20px;
 	padding: 2rem;
 	margin: 2rem 0;
@@ -55,7 +55,7 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #51cf66, #40c057);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .teams-toolbar {
@@ -70,7 +70,7 @@
 .teams-toolbar h2 {
 	font-size: 1.8rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #51cf66, #40c057);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -92,7 +92,7 @@
 	padding: 1.2rem;
 	text-align: left;
 	font-weight: 600;
-	color: #51cf66;
+	color: #9775fa;
 	border-bottom: 2px solid rgba(81, 207, 102, 0.2);
 	font-size: 0.9rem;
 	text-transform: uppercase;
@@ -125,7 +125,7 @@
 
 .member-tag {
 	background: rgba(81, 207, 102, 0.1);
-	color: #51cf66;
+	color: #9775fa;
 	padding: 0.3rem 0.6rem;
 	border-radius: 12px;
 	font-size: 0.8rem;
@@ -147,12 +147,12 @@
 }
 
 .permission-editor {
-	background: linear-gradient(135deg, #4dabf7, #339af0);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
 .permission-reader {
-	background: linear-gradient(135deg, #69db7c, #51cf66);
+	background: linear-gradient(135deg, #9775fa, #9775fa);
 	color: white;
 }
 
@@ -160,7 +160,7 @@
 	padding: 1rem 2rem;
 	border-radius: 12px;
 	font-weight: 600;
-	background: linear-gradient(135deg, #51cf66, #40c057);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 	border: none;
 	transition: all 0.3s ease;
@@ -191,13 +191,13 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #51cf66, #40c057);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .team-form h3 {
 	font-size: 1.8rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #51cf66, #40c057);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -224,7 +224,7 @@
 	display: block;
 	margin: 0 0 0.5rem 0;
 	font-weight: 600;
-	color: #51cf66;
+	color: #9775fa;
 	font-size: 0.9rem;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -246,7 +246,7 @@
 .form-row input:focus,
 .form-row select:focus {
 	outline: none;
-	border-color: #51cf66;
+	border-color: #9775fa;
 	box-shadow: 0 0 0 3px rgba(81, 207, 102, 0.2);
 	transform: translateY(-1px);
 }
@@ -275,7 +275,7 @@
 }
 
 .form-actions .btn:not(.secondary) {
-	background: linear-gradient(135deg, #51cf66, #40c057);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 	border: none;
 }
@@ -283,7 +283,7 @@
 .form-actions .btn.secondary {
 	background: transparent;
 	border: 2px solid rgba(81, 207, 102, 0.3);
-	color: #51cf66;
+	color: #9775fa;
 }
 
 .form-actions .btn:hover {

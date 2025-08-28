@@ -1,7 +1,7 @@
 /* Deadlines Professional Design */
 
 .deadlines-header {
-	background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+	background: linear-gradient(135deg, #9775fa 0%, #845ef7 100%);
 	border-radius: 20px;
 	padding: 2rem;
 	margin: 2rem 0;
@@ -54,13 +54,13 @@
 	left: 0;
 	right: 0;
 	height: 4px;
-	background: linear-gradient(90deg, #ff6b6b, #ee5a52);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .deadlines-panel h2 {
 	font-size: 1.8rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -92,7 +92,7 @@
 	left: 0;
 	right: 0;
 	height: 3px;
-	background: linear-gradient(90deg, #ff6b6b, #ee5a52);
+	background: linear-gradient(90deg, #9775fa, #845ef7);
 }
 
 .summary-card:hover {
@@ -103,7 +103,7 @@
 .summary-number {
 	font-size: 2rem;
 	font-weight: 800;
-	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -114,7 +114,7 @@
 .summary-label {
 	font-size: 0.9rem;
 	font-weight: 600;
-	color: #ff6b6b;
+	color: #9775fa;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 }
@@ -154,7 +154,7 @@
 .date-input:focus,
 .project-select:focus {
 	outline: none;
-	border-color: #ff6b6b;
+	border-color: #9775fa;
 	box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
 }
 
@@ -162,7 +162,7 @@
 	padding: 0.6rem 1.2rem;
 	border-radius: 8px;
 	font-weight: 600;
-	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 	border: none;
 	transition: all 0.3s ease;
@@ -189,7 +189,7 @@
 	padding: 1.2rem;
 	text-align: left;
 	font-weight: 600;
-	color: #ff6b6b;
+	color: #9775fa;
 	border-bottom: 2px solid rgba(255, 107, 107, 0.2);
 	font-size: 0.9rem;
 	text-transform: uppercase;
@@ -220,28 +220,28 @@
 }
 
 .alert-critical {
-	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
 .alert-warning {
-	background: linear-gradient(135deg, #ffd43b, #fab005);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
 .alert-upcoming {
-	background: linear-gradient(135deg, #4dabf7, #339af0);
+	background: linear-gradient(135deg, #9775fa, #845ef7);
 	color: white;
 }
 
 .overdue-highlight {
 	background: rgba(255, 107, 107, 0.1) !important;
-	border-left: 4px solid #ff6b6b !important;
+	border-left: 4px solid #9775fa !important;
 }
 
 .today-highlight {
 	background: rgba(255, 212, 59, 0.1) !important;
-	border-left: 4px solid #ffd43b !important;
+	border-left: 4px solid #9775fa !important;
 }
 
 /* Legacy compatibility */
