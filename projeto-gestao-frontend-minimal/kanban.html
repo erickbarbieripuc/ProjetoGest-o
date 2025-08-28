@@ -43,27 +43,442 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <div class="toolbar">
-    <h2>Kanban</h2>
-    <div class="actions"><a class="btn secondary" href="project-detail.html">Voltar ao projeto</a></div>
+<!-- Kanban Header with Stats -->
+<div class="kanban-header">
+  <div class="kanban-title">
+    <h1>Kanban - Projeto Website</h1>
+    <p>Gerencie suas tarefas de forma visual e eficiente</p>
   </div>
-  <div class="kanban" data-project-id="1">
-    <div class="col" id="backlog"><h4>Backlog</h4>
-      <div class="card" data-task-id="t1">Landing v2</div>
-      <div class="card" data-task-id="t2">Criar wireframes</div>
+  <div class="kanban-stats">
+    <div class="stat-item">
+      <div class="stat-number">12</div>
+      <div class="stat-label">Total</div>
     </div>
-    <div class="col" id="doing"><h4>Fazendo</h4>
-      <div class="card" data-task-id="t3">API Auth</div>
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Em Progresso</div>
     </div>
-    <div class="col" id="review"><h4>Revisão</h4>
-      <div class="card" data-task-id="t4">UI Header</div>
+    <div class="stat-item">
+      <div class="stat-number">5</div>
+      <div class="stat-label">Concluídas</div>
     </div>
-    <div class="col" id="done"><h4>Concluída</h4>
-      <div class="card" data-task-id="t5">Setup projeto</div>
+    <div class="stat-item">
+      <div class="stat-number">85%</div>
+      <div class="stat-label">Progresso</div>
+    </div>
+  </div>
+</div>
+
+<!-- Kanban Controls -->
+<div class="kanban-controls">
+  <div class="control-group">
+    <label>Filtrar por:</label>
+    <select id="filter-assignee">
+      <option value="">Todos os responsáveis</option>
+      <option value="joao">João Silva</option>
+      <option value="maria">Maria Santos</option>
+      <option value="pedro">Pedro Costa</option>
+    </select>
+    <select id="filter-priority">
+      <option value="">Todas as prioridades</option>
+      <option value="high">Alta</option>
+      <option value="medium">Média</option>
+      <option value="low">Baixa</option>
+    </select>
+    <input type="text" id="search-tasks" placeholder="Buscar tarefas...">
+  </div>
+  <div class="control-actions">
+    <button class="btn secondary" id="add-column">+ Adicionar Coluna</button>
+    <button class="btn primary" id="add-task">+ Nova Tarefa</button>
+  </div>
+</div>
+
+<section class="panel kanban-panel">
+  <div class="kanban-container">
+    <div class="kanban" data-project-id="1">
+      <div class="col" id="backlog">
+        <div class="col-header">
+          <h4>Backlog</h4>
+          <div class="col-count">4 tarefas</div>
+          <div class="col-actions">
+            <button class="col-menu">⋯</button>
+          </div>
+        </div>
+        <div class="col-content">
+          <div class="card" data-task-id="t1" data-priority="high" data-assignee="joao">
+            <div class="card-header">
+              <div class="card-priority priority-high"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">Landing Page v2</div>
+            <div class="card-description">Redesign da página inicial com novo layout</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">J</div>
+                <span>João Silva</span>
+              </div>
+              <div class="card-due">15/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">UI/UX</span>
+              <span class="tag">Frontend</span>
+            </div>
+          </div>
+          
+          <div class="card" data-task-id="t2" data-priority="medium" data-assignee="maria">
+            <div class="card-header">
+              <div class="card-priority priority-medium"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">Criar Wireframes</div>
+            <div class="card-description">Wireframes para as principais telas</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">M</div>
+                <span>Maria Santos</span>
+              </div>
+              <div class="card-due">18/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Design</span>
+            </div>
+          </div>
+
+          <div class="card" data-task-id="t6" data-priority="low" data-assignee="pedro">
+            <div class="card-header">
+              <div class="card-priority priority-low"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">Documentação API</div>
+            <div class="card-description">Documentar endpoints da API</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">P</div>
+                <span>Pedro Costa</span>
+              </div>
+              <div class="card-due">20/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Documentação</span>
+            </div>
+          </div>
+
+          <div class="add-card-btn">+ Adicionar tarefa</div>
+        </div>
+      </div>
+
+      <div class="col" id="doing">
+        <div class="col-header">
+          <h4>Em Progresso</h4>
+          <div class="col-count">2 tarefas</div>
+          <div class="col-actions">
+            <button class="col-menu">⋯</button>
+          </div>
+        </div>
+        <div class="col-content">
+          <div class="card" data-task-id="t3" data-priority="high" data-assignee="joao">
+            <div class="card-header">
+              <div class="card-priority priority-high"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">API de Autenticação</div>
+            <div class="card-description">Implementar sistema de login e registro</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">J</div>
+                <span>João Silva</span>
+              </div>
+              <div class="card-due">16/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Backend</span>
+              <span class="tag">API</span>
+            </div>
+            <div class="card-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+              </div>
+              <span class="progress-text">60%</span>
+            </div>
+          </div>
+
+          <div class="card" data-task-id="t7" data-priority="medium" data-assignee="maria">
+            <div class="card-header">
+              <div class="card-priority priority-medium"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">Componentes React</div>
+            <div class="card-description">Criar componentes reutilizáveis</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">M</div>
+                <span>Maria Santos</span>
+              </div>
+              <div class="card-due">19/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Frontend</span>
+              <span class="tag">React</span>
+            </div>
+            <div class="card-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 30%"></div>
+              </div>
+              <span class="progress-text">30%</span>
+            </div>
+          </div>
+
+          <div class="add-card-btn">+ Adicionar tarefa</div>
+        </div>
+      </div>
+
+      <div class="col" id="review">
+        <div class="col-header">
+          <h4>Em Revisão</h4>
+          <div class="col-count">2 tarefas</div>
+          <div class="col-actions">
+            <button class="col-menu">⋯</button>
+          </div>
+        </div>
+        <div class="col-content">
+          <div class="card" data-task-id="t4" data-priority="medium" data-assignee="pedro">
+            <div class="card-header">
+              <div class="card-priority priority-medium"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">Header da Interface</div>
+            <div class="card-description">Implementação do cabeçalho responsivo</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">P</div>
+                <span>Pedro Costa</span>
+              </div>
+              <div class="card-due">14/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Frontend</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="card-review">
+              <div class="review-status">Aguardando aprovação</div>
+              <div class="review-assignee">Revisor: Maria Santos</div>
+            </div>
+          </div>
+
+          <div class="card" data-task-id="t8" data-priority="low" data-assignee="joao">
+            <div class="card-header">
+              <div class="card-priority priority-low"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">Testes Unitários</div>
+            <div class="card-description">Implementar testes para API</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">J</div>
+                <span>João Silva</span>
+              </div>
+              <div class="card-due">21/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Testing</span>
+            </div>
+            <div class="card-review">
+              <div class="review-status">Em análise</div>
+              <div class="review-assignee">Revisor: Pedro Costa</div>
+            </div>
+          </div>
+
+          <div class="add-card-btn">+ Adicionar tarefa</div>
+        </div>
+      </div>
+
+      <div class="col" id="done">
+        <div class="col-header">
+          <h4>Concluído</h4>
+          <div class="col-count">4 tarefas</div>
+          <div class="col-actions">
+            <button class="col-menu">⋯</button>
+          </div>
+        </div>
+        <div class="col-content">
+          <div class="card completed" data-task-id="t5" data-priority="high" data-assignee="maria">
+            <div class="card-header">
+              <div class="card-priority priority-high"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">Setup do Projeto</div>
+            <div class="card-description">Configuração inicial do ambiente</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">M</div>
+                <span>Maria Santos</span>
+              </div>
+              <div class="card-completed">✓ 10/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Setup</span>
+            </div>
+          </div>
+
+          <div class="card completed" data-task-id="t9" data-priority="medium" data-assignee="pedro">
+            <div class="card-header">
+              <div class="card-priority priority-medium"></div>
+              <div class="card-menu">⋯</div>
+            </div>
+            <div class="card-title">Banco de Dados</div>
+            <div class="card-description">Modelagem e criação das tabelas</div>
+            <div class="card-footer">
+              <div class="card-assignee">
+                <div class="assignee-avatar">P</div>
+                <span>Pedro Costa</span>
+              </div>
+              <div class="card-completed">✓ 12/12</div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Database</span>
+            </div>
+          </div>
+
+          <div class="add-card-btn">+ Adicionar tarefa</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Modal para adicionar/editar tarefa -->
+<div id="task-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Nova Tarefa</h3>
+      <button class="modal-close">&times;</button>
+    </div>
+    <form class="modal-body">
+      <div class="form-group">
+        <label>Título da Tarefa</label>
+        <input type="text" name="title" required>
+      </div>
+      <div class="form-group">
+        <label>Descrição</label>
+        <textarea name="description" rows="3"></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Responsável</label>
+          <select name="assignee">
+            <option value="joao">João Silva</option>
+            <option value="maria">Maria Santos</option>
+            <option value="pedro">Pedro Costa</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Prioridade</label>
+          <select name="priority">
+            <option value="low">Baixa</option>
+            <option value="medium">Média</option>
+            <option value="high">Alta</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Data de Entrega</label>
+        <input type="date" name="due-date">
+      </div>
+      <div class="form-group">
+        <label>Tags (separadas por vírgula)</label>
+        <input type="text" name="tags" placeholder="Frontend, UI/UX, React">
+      </div>
+    </form>
+    <div class="modal-footer">
+      <button class="btn secondary" id="cancel-task">Cancelar</button>
+      <button class="btn primary" id="save-task">Salvar Tarefa</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Funcionalidades básicas do Kanban
+document.addEventListener('DOMContentLoaded', function() {
+  // Drag and drop simulation (visual feedback)
+  const cards = document.querySelectorAll('.card');
+  const columns = document.querySelectorAll('.col-content');
+  
+  cards.forEach(card => {
+    card.addEventListener('dragstart', function(e) {
+      e.dataTransfer.setData('text/plain', '');
+      this.classList.add('dragging');
+    });
+    
+    card.addEventListener('dragend', function() {
+      this.classList.remove('dragging');
+    });
+  });
+  
+  columns.forEach(column => {
+    column.addEventListener('dragover', function(e) {
+      e.preventDefault();
+      this.classList.add('drag-over');
+    });
+    
+    column.addEventListener('dragleave', function() {
+      this.classList.remove('drag-over');
+    });
+    
+    column.addEventListener('drop', function(e) {
+      e.preventDefault();
+      this.classList.remove('drag-over');
+      // Aqui seria implementada a lógica de mover a tarefa
+    });
+  });
+
+  // Modal functionality
+  const modal = document.getElementById('task-modal');
+  const addTaskBtn = document.getElementById('add-task');
+  const cancelBtn = document.getElementById('cancel-task');
+  const closeBtn = document.querySelector('.modal-close');
+
+  addTaskBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  [cancelBtn, closeBtn].forEach(btn => {
+    btn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  });
+
+  // Filters
+  const filterAssignee = document.getElementById('filter-assignee');
+  const filterPriority = document.getElementById('filter-priority');
+  const searchTasks = document.getElementById('search-tasks');
+
+  function filterTasks() {
+    const assigneeFilter = filterAssignee.value;
+    const priorityFilter = filterPriority.value;
+    const searchFilter = searchTasks.value.toLowerCase();
+
+    cards.forEach(card => {
+      const assignee = card.dataset.assignee;
+      const priority = card.dataset.priority;
+      const title = card.querySelector('.card-title').textContent.toLowerCase();
+      
+      const matchesAssignee = !assigneeFilter || assignee === assigneeFilter;
+      const matchesPriority = !priorityFilter || priority === priorityFilter;
+      const matchesSearch = !searchFilter || title.includes(searchFilter);
+      
+      if (matchesAssignee && matchesPriority && matchesSearch) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  filterAssignee.addEventListener('change', filterTasks);
+  filterPriority.addEventListener('change', filterTasks);
+  searchTasks.addEventListener('input', filterTasks);
+});
+</script>
 
       </main>
 

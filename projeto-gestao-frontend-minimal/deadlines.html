@@ -43,23 +43,103 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <h2>Prazos e Alertas</h2>
-  <div class="toolbar">
-    <div class="filters">
-      <input type="date"/><input type="date"/>
-      <select><option>Todos os projetos</option></select>
-      <button class="btn">Aplicar</button>
-    </div>
-  </div>
-  <table class="table">
-    <thead><tr><th>Projeto</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th>Alerta</th></tr></thead>
-    <tbody>
-      <tr><td>Website ACME</td><td>Landing v2</td><td>João</td><td>21/08</td><td><span class="badge warn">Hoje</span></td></tr>
-      <tr><td>ERP</td><td>API Auth</td><td>Maria</td><td>23/08</td><td><span class="badge">Em 2 dias</span></td></tr>
-    </tbody>
-  </table>
-</section>
+	<header class="deadlines-header">
+		<h1 class="deadlines-title">Controle de Prazos</h1>
+		<p class="deadlines-subtitle">Monitore prazos críticos e mantenha seus projetos em dia</p>
+	</header>
+
+	<div class="deadlines-panel">
+		<h2>Resumo de Prazos</h2>
+		
+		<div class="summary-cards">
+			<div class="summary-card">
+				<span class="summary-number">3</span>
+				<div class="summary-label">Vencidos</div>
+			</div>
+			<div class="summary-card">
+				<span class="summary-number">2</span>
+				<div class="summary-label">Vencem Hoje</div>
+			</div>
+			<div class="summary-card">
+				<span class="summary-number">5</span>
+				<div class="summary-label">Esta Semana</div>
+			</div>
+			<div class="summary-card">
+				<span class="summary-number">12</span>
+				<div class="summary-label">Este Mês</div>
+			</div>
+		</div>
+
+		<div class="deadlines-toolbar">
+			<div class="filter-group">
+				<input type="date" class="date-input" value="2024-08-20"/>
+				<input type="date" class="date-input" value="2024-08-30"/>
+				<select class="project-select">
+					<option>Todos os projetos</option>
+					<option>Website ACME</option>
+					<option>Sistema ERP</option>
+					<option>App Mobile</option>
+				</select>
+				<button class="apply-filter-btn">Aplicar Filtros</button>
+			</div>
+		</div>
+
+		<table class="deadlines-table">
+			<thead>
+				<tr>
+					<th>Projeto</th>
+					<th>Tarefa</th>
+					<th>Responsável</th>
+					<th>Prazo</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="overdue-highlight">
+					<td>Website ACME</td>
+					<td>Landing Page v2.0</td>
+					<td>João Silva</td>
+					<td>19/08/2024</td>
+					<td><span class="alert-badge alert-critical">Vencido</span></td>
+				</tr>
+				<tr class="today-highlight">
+					<td>Sistema ERP</td>
+					<td>API de Autenticação</td>
+					<td>Maria Santos</td>
+					<td>21/08/2024</td>
+					<td><span class="alert-badge alert-warning">Vence Hoje</span></td>
+				</tr>
+				<tr>
+					<td>App Mobile</td>
+					<td>Interface de Login</td>
+					<td>Ana Oliveira</td>
+					<td>23/08/2024</td>
+					<td><span class="alert-badge alert-upcoming">Em 2 dias</span></td>
+				</tr>
+				<tr class="overdue-highlight">
+					<td>Website ACME</td>
+					<td>Testes de Performance</td>
+					<td>Pedro Costa</td>
+					<td>18/08/2024</td>
+					<td><span class="alert-badge alert-critical">Vencido</span></td>
+				</tr>
+				<tr>
+					<td>Sistema ERP</td>
+					<td>Documentação API</td>
+					<td>Carlos Lima</td>
+					<td>25/08/2024</td>
+					<td><span class="alert-badge alert-upcoming">Em 4 dias</span></td>
+				</tr>
+				<tr>
+					<td>App Mobile</td>
+					<td>Push Notifications</td>
+					<td>Fernanda Reis</td>
+					<td>28/08/2024</td>
+					<td><span class="alert-badge alert-upcoming">Em 1 semana</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
       </main>
 

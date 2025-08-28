@@ -43,35 +43,166 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <div class="toolbar">
-    <h2 data-bind="projectName">Projeto: Website ACME</h2>
-    <div class="actions">
-      <a class="btn secondary" href="project-settings.html">Configurações</a>
-      <a class="btn" href="task-form.html">Nova Tarefa</a>
+<!-- Project Detail Header -->
+<div class="project-detail-header">
+  <div class="project-detail-title">Projeto: Website ACME</div>
+  <div class="project-detail-subtitle">Desenvolvimento completo da plataforma e-commerce</div>
+</div>
+
+<!-- Project Overview -->
+<section class="project-overview">
+  <div class="project-toolbar">
+    <h2>Visão Geral do Projeto</h2>
+    <div class="project-actions">
+      <a class="action-btn secondary" href="project-settings.html">⚙️ Configurações</a>
+      <a class="action-btn primary" href="task-form.html">✨ Nova Tarefa</a>
     </div>
   </div>
-  <p class="hint">Resumo do projeto, KPIs, equipe e tarefas.</p>
-  <div class="grid cols-2">
-    <div class="card">
-      <h3>Resumo</h3>
-      <p><strong>Status:</strong> Ativo · <strong>Prazo:</strong> 30/09 · <strong>Dono:</strong> Ana</p>
-      <p><strong>Equipe:</strong> Ana, João, Maria</p>
+  
+  <div class="project-stats">
+    <div class="stat-card">
+      <h3>📊 Status do Projeto</h3>
+      <div class="stat-info">
+        <p><strong>Status:</strong> <span class="status-indicator status-active">🟢 Ativo</span></p>
+        <p><strong>Prazo Final:</strong> 30 de Setembro, 2024</p>
+        <p><strong>Gerente:</strong> Ana Silva</p>
+        <p><strong>Orçamento:</strong> R$ 150.000</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Progresso</h3>
-      <p>Concluídas: 12 · Em andamento: 8 · A fazer: 10</p>
+    
+    <div class="stat-card">
+      <h3>👥 Equipe do Projeto</h3>
+      <div class="stat-info">
+        <div class="team-members">
+          <div class="team-member">
+            <div class="member-avatar">A</div>
+            <span>Ana Silva</span>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">J</div>
+            <span>João Santos</span>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">M</div>
+            <span>Maria Costa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <h3>📈 Progresso Geral</h3>
+      <div class="stat-info">
+        <div class="progress-section">
+          <div class="progress-item">
+            <span class="progress-number">12</span>
+            <span class="progress-label">Concluídas</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-number">8</span>
+            <span class="progress-label">Em Progresso</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-number">10</span>
+            <span class="progress-label">A Fazer</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-number">73%</span>
+            <span class="progress-label">Completo</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="panel">
-  <h3>Tarefas</h3>
-  <table class="table">
-    <thead><tr><th>Título</th><th>Responsável</th><th>Prioridade</th><th>Status</th><th>Prazo</th><th>Ações</th></tr></thead>
+<!-- Tasks Panel -->
+<section class="tasks-panel">
+  <h3>📋 Tarefas do Projeto</h3>
+  <table class="tasks-table">
+    <thead>
+      <tr>
+        <th>Título da Tarefa</th>
+        <th>Responsável</th>
+        <th>Prioridade</th>
+        <th>Status</th>
+        <th>Prazo</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
     <tbody>
-      <tr><td>Landing v2</td><td>João</td><td><span class="badge">Média</span></td><td><span class="badge">Fazendo</span></td><td>21/08</td><td><a class="btn secondary" href="task-form.html">Editar</a></td></tr>
-      <tr><td>API Auth</td><td>Maria</td><td><span class="badge danger">Alta</span></td><td><span class="badge">A fazer</span></td><td>23/08</td><td><a class="btn secondary" href="task-form.html">Editar</a></td></tr>
+      <tr>
+        <td>
+          <div class="task-title">Landing Page v2</div>
+        </td>
+        <td>
+          <div class="task-assignee">João Santos</div>
+        </td>
+        <td>
+          <span class="priority-badge priority-medium">Média</span>
+        </td>
+        <td>
+          <span class="status-badge status-doing">Em Progresso</span>
+        </td>
+        <td>21/08/2024</td>
+        <td>
+          <a class="task-edit-btn" href="task-form.html">✏️ Editar</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="task-title">API de Autenticação</div>
+        </td>
+        <td>
+          <div class="task-assignee">Maria Costa</div>
+        </td>
+        <td>
+          <span class="priority-badge priority-high">Alta</span>
+        </td>
+        <td>
+          <span class="status-badge status-todo">A Fazer</span>
+        </td>
+        <td>23/08/2024</td>
+        <td>
+          <a class="task-edit-btn" href="task-form.html">✏️ Editar</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="task-title">Design System</div>
+        </td>
+        <td>
+          <div class="task-assignee">Ana Silva</div>
+        </td>
+        <td>
+          <span class="priority-badge priority-high">Alta</span>
+        </td>
+        <td>
+          <span class="status-badge status-done">Concluída</span>
+        </td>
+        <td>15/08/2024</td>
+        <td>
+          <a class="task-edit-btn" href="task-form.html">👁️ Ver</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="task-title">Testes Unitários</div>
+        </td>
+        <td>
+          <div class="task-assignee">João Santos</div>
+        </td>
+        <td>
+          <span class="priority-badge priority-low">Baixa</span>
+        </td>
+        <td>
+          <span class="status-badge status-todo">A Fazer</span>
+        </td>
+        <td>30/08/2024</td>
+        <td>
+          <a class="task-edit-btn" href="task-form.html">✏️ Editar</a>
+        </td>
+      </tr>
     </tbody>
   </table>
 </section>

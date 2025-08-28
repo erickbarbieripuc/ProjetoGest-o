@@ -1,5 +1,294 @@
 
+/* Teams Professional Design */
 
+.teams-header {
+	background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+	border-radius: 20px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.teams-header::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	right: -50%;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+	border-radius: 50%;
+}
+
+.teams-title {
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin: 0 0 0.5rem 0;
+}
+
+.teams-subtitle {
+	font-size: 1.1rem;
+	opacity: 0.9;
+	margin: 0;
+}
+
+.teams-panel {
+	background: linear-gradient(135deg, var(--surface) 0%, rgba(81, 207, 102, 0.03) 100%);
+	border: 1px solid rgba(81, 207, 102, 0.2);
+	border-radius: 20px;
+	padding: 2.5rem;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+
+.teams-panel::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, #51cf66, #40c057);
+}
+
+.teams-toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 2px solid rgba(81, 207, 102, 0.1);
+}
+
+.teams-toolbar h2 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	background: linear-gradient(135deg, #51cf66, #40c057);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 0;
+}
+
+.teams-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+	background: var(--surface);
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.teams-table th {
+	background: linear-gradient(135deg, rgba(81, 207, 102, 0.1), rgba(64, 192, 87, 0.1));
+	padding: 1.2rem;
+	text-align: left;
+	font-weight: 600;
+	color: #51cf66;
+	border-bottom: 2px solid rgba(81, 207, 102, 0.2);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.teams-table td {
+	padding: 1.2rem;
+	border-bottom: 1px solid rgba(81, 207, 102, 0.1);
+	transition: all 0.3s ease;
+	vertical-align: middle;
+}
+
+.teams-table tr:hover td {
+	background: rgba(81, 207, 102, 0.05);
+	transform: scale(1.01);
+}
+
+.team-name {
+	font-weight: 600;
+	color: var(--primary);
+	font-size: 1.1rem;
+}
+
+.team-members {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.member-tag {
+	background: rgba(81, 207, 102, 0.1);
+	color: #51cf66;
+	padding: 0.3rem 0.6rem;
+	border-radius: 12px;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.permission-badge {
+	padding: 0.4rem 0.8rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+
+.permission-admin {
+	background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+	color: white;
+}
+
+.permission-editor {
+	background: linear-gradient(135deg, #4dabf7, #339af0);
+	color: white;
+}
+
+.permission-reader {
+	background: linear-gradient(135deg, #69db7c, #51cf66);
+	color: white;
+}
+
+.new-team-btn {
+	padding: 1rem 2rem;
+	border-radius: 12px;
+	font-weight: 600;
+	background: linear-gradient(135deg, #51cf66, #40c057);
+	color: white;
+	border: none;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.new-team-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(81, 207, 102, 0.4);
+}
+
+.team-form {
+	background: linear-gradient(135deg, var(--surface) 0%, rgba(81, 207, 102, 0.03) 100%);
+	border: 1px solid rgba(81, 207, 102, 0.2);
+	border-radius: 20px;
+	padding: 2.5rem;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+}
+
+.team-form::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, #51cf66, #40c057);
+}
+
+.team-form h3 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	background: linear-gradient(135deg, #51cf66, #40c057);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 0 0 2rem 0;
+	text-align: center;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 1.5rem;
+	align-items: end;
+	margin-bottom: 2rem;
+}
+
+.col-6 { grid-column: span 6; }
+.col-12 { grid-column: span 12; }
+
+.form-row > div {
+	position: relative;
+}
+
+.form-row label {
+	display: block;
+	margin: 0 0 0.5rem 0;
+	font-weight: 600;
+	color: #51cf66;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.form-row input,
+.form-row select {
+	width: 100%;
+	padding: 0.9rem 1.2rem;
+	border: 2px solid rgba(81, 207, 102, 0.2);
+	border-radius: 12px;
+	background: var(--surface);
+	color: var(--text);
+	font-size: 1rem;
+	transition: all 0.3s ease;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-row input:focus,
+.form-row select:focus {
+	outline: none;
+	border-color: #51cf66;
+	box-shadow: 0 0 0 3px rgba(81, 207, 102, 0.2);
+	transform: translateY(-1px);
+}
+
+.form-actions {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	padding-top: 2rem;
+	border-top: 2px solid rgba(81, 207, 102, 0.1);
+}
+
+.form-actions .btn {
+	min-width: 120px;
+	padding: 1rem 2rem;
+	font-weight: 600;
+	font-size: 1rem;
+	border-radius: 12px;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-actions .btn:not(.secondary) {
+	background: linear-gradient(135deg, #51cf66, #40c057);
+	color: white;
+	border: none;
+}
+
+.form-actions .btn.secondary {
+	background: transparent;
+	border: 2px solid rgba(81, 207, 102, 0.3);
+	color: #51cf66;
+}
+
+.form-actions .btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Legacy styles for compatibility */
 .panel .toolbar {
 	margin-bottom: 1.2rem;
 }
@@ -7,4 +296,29 @@
 	min-width: 120px;
 	padding-left: 1.2rem;
 	padding-right: 1.2rem;
+}
+
+@media (max-width: 768px) {
+	.teams-panel,
+	.team-form {
+		padding: 2rem 1.5rem;
+		margin: 1rem;
+	}
+	
+	.col-6 {
+		grid-column: span 12;
+	}
+	
+	.teams-table {
+		font-size: 0.9rem;
+	}
+	
+	.teams-table th,
+	.teams-table td {
+		padding: 0.8rem;
+	}
+	
+	.form-actions {
+		flex-direction: column;
+	}
 }

@@ -43,19 +43,72 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <h2>Chat do Projeto</h2>
-  <div class="card" style="max-height:360px; overflow:auto; display:flex; flex-direction:column; gap:.6rem; padding:.8rem" aria-live="polite">
-    <div><span class="badge">Ana</span> Olá, iniciando sprint 2.</div>
-    <div><span class="badge">João</span> Atualizei o kanban.</div>
-    <div><span class="badge">Maria</span> Precisamos alinhar prazos.</div>
-  </div>
-  <div class="form-row" style="margin-top:.6rem">
-    <div class="col-12"><label class="visually-hidden">Mensagem</label><input placeholder="Escreva uma mensagem..."/></div>
-    <div class="col-12" style="display:flex; justify-content:flex-end"><button class="btn">Enviar</button></div>
-  </div>
-  <p class="hint">Integre via WebSocket/SSE no backend Java.</p>
-</section>
+	<header class="chat-header">
+		<h1 class="chat-title">Chat Interno</h1>
+		<p class="chat-subtitle">Comunique-se com sua equipe em tempo real e mantenha todos alinhados</p>
+	</header>
+
+	<div class="chat-panel">
+		<h2>Projeto: Sistema de Gestão</h2>
+		
+		<div class="online-users">
+			<div class="user-chip">
+				<div class="user-status"></div>
+				<span>Ana Silva</span>
+			</div>
+			<div class="user-chip">
+				<div class="user-status"></div>
+				<span>João Costa</span>
+			</div>
+			<div class="user-chip">
+				<div class="user-status"></div>
+				<span>Maria Santos</span>
+			</div>
+		</div>
+
+		<div class="messages-area" aria-live="polite">
+			<div class="message">
+				<div class="message-content">
+					<span class="message-author">Ana</span>
+					<div class="message-bubble">Olá pessoal! Iniciando o sprint 2. Vamos focar nas funcionalidades de relatórios essa semana.</div>
+					<div class="message-time">09:15</div>
+				</div>
+			</div>
+			
+			<div class="message">
+				<div class="message-content">
+					<span class="message-author">João</span>
+					<div class="message-bubble">Perfeito! Acabei de atualizar o kanban com as novas tarefas. Já podemos começar a trabalhar.</div>
+					<div class="message-time">09:18</div>
+				</div>
+			</div>
+			
+			<div class="message">
+				<div class="message-content">
+					<span class="message-author">Maria</span>
+					<div class="message-bubble">Ótimo! Precisamos alinhar os prazos para as entregas. Podemos fazer uma reunião rápida hoje à tarde?</div>
+					<div class="message-time">09:22</div>
+				</div>
+			</div>
+			
+			<div class="message">
+				<div class="message-content">
+					<span class="message-author">Você</span>
+					<div class="message-bubble">Concordo! Vamos marcar para 14h. Já criei uma sala no meet.</div>
+					<div class="message-time">09:25</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="message-input-area">
+			<input type="text" class="message-input" placeholder="Escreva uma mensagem..." />
+			<button class="send-button" type="button">Enviar</button>
+		</div>
+
+		<div class="integration-hint">
+			💡 Dica: Integre via WebSocket/SSE no backend Java para mensagens em tempo real
+		</div>
+	</div>
 
       </main>
 

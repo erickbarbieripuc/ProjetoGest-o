@@ -43,20 +43,86 @@
       </header>
       <main class="main">
         
+<!-- Animated Header -->
+<div class="task-form-header">
+  <div class="task-form-title">🎯 Criar Nova Tarefa</div>
+  <div class="task-form-subtitle">Defina os detalhes e requisitos da sua tarefa</div>
+</div>
+
 <form class="panel" method="post" action="/tasks/save" data-form="task">
-  <h2>Tarefa</h2>
-  <div class="form-row">
-    <div class="col-6"><label for="ttitle">Título *</label><input id="ttitle" name="title" required/></div>
-    <div class="col-6"><label for="owner">Responsável</label><input id="owner" name="assignee"/></div>
-    <div class="col-12"><label for="tdesc">Descrição</label><textarea id="tdesc" name="description" rows="4"></textarea></div>
-    <div class="col-3"><label for="priority">Prioridade</label><select id="priority" name="priority"><option>Baixa</option><option>Média</option><option>Alta</option></select></div>
-    <div class="col-3"><label for="status">Status</label><select id="status" name="status"><option>A fazer</option><option>Fazendo</option><option>Revisão</option><option>Concluída</option></select></div>
-    <div class="col-3"><label for="start">Início</label><input id="start" type="date" name="start_date"/></div>
-    <div class="col-3"><label for="due">Prazo</label><input id="due" type="date" name="due_date"/></div>
+  <div class="form-section">
+    <h3 class="section-title">📝 Informações da Tarefa</h3>
+    <div class="form-row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="ttitle">Título da Tarefa *</label>
+          <input id="ttitle" name="title" required placeholder="Ex: Implementar sistema de login"/>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="owner">Responsável</label>
+          <input id="owner" name="assignee" placeholder="Ex: Maria Silva"/>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label for="tdesc">Descrição Detalhada</label>
+          <textarea id="tdesc" name="description" placeholder="Descreva os requisitos, critérios de aceitação e detalhes técnicos da tarefa..."></textarea>
+        </div>
+      </div>
+    </div>
   </div>
-  <div style="display:flex; gap:.6rem; justify-content:flex-end; margin-top:.6rem">
-    <a class="btn secondary" href="project-detail.html">Cancelar</a>
-    <button class="btn" type="submit">Salvar</button>
+
+  <div class="form-section priority-section">
+    <h3 class="section-title">⚡ Prioridade e Status</h3>
+    <div class="form-row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="priority">Nível de Prioridade</label>
+          <select id="priority" name="priority">
+            <option>🟢 Baixa</option>
+            <option>🟡 Média</option>
+            <option>🔴 Alta</option>
+            <option>🚨 Crítica</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="status">Status da Tarefa</label>
+          <select id="status" name="status">
+            <option>📋 A fazer</option>
+            <option>⚡ Em andamento</option>
+            <option>👀 Em revisão</option>
+            <option>✅ Concluída</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section timeline-section">
+    <h3 class="section-title">📅 Cronograma</h3>
+    <div class="form-row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="start">Data de Início</label>
+          <input id="start" type="date" name="start_date"/>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="due">Prazo de Entrega</label>
+          <input id="due" type="date" name="due_date"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <a class="btn secondary" href="project-detail.html">❌ Cancelar</a>
+    <button class="btn" type="submit">💾 Salvar Tarefa</button>
   </div>
 </form>
 

@@ -43,24 +43,81 @@
       </header>
       <main class="main">
         
-<section class="panel">
-  <h2>Métricas</h2>
-  <div class="grid cols-3">
-    <div class="card"><strong>Taxa de conclusão</strong><div class="badge success">86%</div><p class="hint">Tarefas concluídas vs total</p></div>
-    <div class="card"><strong>Lead time médio</strong><div class="badge">3.2 dias</div><p class="hint">Criar → Concluir</p></div>
-    <div class="card"><strong>WIP médio</strong><div class="badge">5</div><p class="hint">Tarefas simultâneas</p></div>
-  </div>
-</section>
-<section class="panel">
-  <h3>Relatório por projeto</h3>
-  <table class="table">
-    <thead><tr><th>Projeto</th><th>Tarefas</th><th>Concluídas</th><th>Produtividade</th><th>Exportar</th></tr></thead>
-    <tbody>
-      <tr><td>Website ACME</td><td>30</td><td>20</td><td><span class="badge success">80%</span></td><td><a class="btn secondary" href="#">CSV</a></td></tr>
-      <tr><td>ERP</td><td>25</td><td>15</td><td><span class="badge">60%</span></td><td><a class="btn secondary" href="#">CSV</a></td></tr>
-    </tbody>
-  </table>
-</section>
+	<header class="reports-header">
+		<h1 class="reports-title">Relatórios de Produtividade</h1>
+		<p class="reports-subtitle">Acompanhe métricas e indicadores de performance dos seus projetos</p>
+	</header>
+
+	<div class="reports-panel">
+		<h2>Métricas Principais</h2>
+		<div class="grid cols-3">
+			<div class="card">
+				<strong>Taxa de conclusão</strong>
+				<div class="badge success">86%</div>
+				<p class="hint">Tarefas concluídas vs total</p>
+			</div>
+			<div class="card">
+				<strong>Lead time médio</strong>
+				<div class="badge">3.2 dias</div>
+				<p class="hint">Criar → Concluir</p>
+			</div>
+			<div class="card">
+				<strong>WIP médio</strong>
+				<div class="badge">5</div>
+				<p class="hint">Tarefas simultâneas</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="reports-panel">
+		<h3>Relatório por projeto</h3>
+		<table class="reports-table">
+			<thead>
+				<tr>
+					<th>Projeto</th>
+					<th>Tarefas</th>
+					<th>Concluídas</th>
+					<th>Produtividade</th>
+					<th>Última Atividade</th>
+					<th>Exportar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="project-name">Website ACME</td>
+					<td>30</td>
+					<td>26</td>
+					<td><span class="progress-badge progress-high">87%</span></td>
+					<td>Hoje</td>
+					<td><a class="export-btn" href="#">CSV</a></td>
+				</tr>
+				<tr>
+					<td class="project-name">Sistema ERP</td>
+					<td>25</td>
+					<td>18</td>
+					<td><span class="progress-badge progress-medium">72%</span></td>
+					<td>Ontem</td>
+					<td><a class="export-btn" href="#">CSV</a></td>
+				</tr>
+				<tr>
+					<td class="project-name">App Mobile</td>
+					<td>40</td>
+					<td>22</td>
+					<td><span class="progress-badge progress-medium">55%</span></td>
+					<td>2 dias atrás</td>
+					<td><a class="export-btn" href="#">CSV</a></td>
+				</tr>
+				<tr>
+					<td class="project-name">Portal Cliente</td>
+					<td>15</td>
+					<td>6</td>
+					<td><span class="progress-badge progress-low">40%</span></td>
+					<td>1 semana atrás</td>
+					<td><a class="export-btn" href="#">CSV</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
       </main>
 
