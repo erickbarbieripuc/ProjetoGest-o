@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Perfil do Usuário{% endblock %}
+{% block content %}
+<div class="profile-header">
+  <h1 class="profile-title">👤 Meu Perfil</h1>
+  <p class="profile-subtitle">Gerencie suas informações pessoais e preferências</p>
+</div>
+<form class="panel" method="post">
+  {% csrf_token %}
+  <h2>⚙️ Configurações do Perfil</h2>
+  <div class="profile-avatar"><div class="avatar-display">👤</div><p style="color: var(--muted); margin: 0;">Foto do perfil atual</p></div>
+  <div class="form-section"><h3 class="section-title">📝 Informações Pessoais</h3></div>
+  <!-- ... restante do formulário ... -->
+</form>
+{% endblock %}

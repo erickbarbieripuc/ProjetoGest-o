@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+<p>Total de projetos: {{ total_projects }}</p>
+<p>Tarefas abertas: {{ open_tasks }}</p>
+<h2>Últimas tarefas</h2>
+<ul>
+  {% for task in latest_tasks %}
+    <li>{{ task.title }} - {{ task.get_status_display }} ({{ task.updated_at }})</li>
+  {% empty %}
+    <li>Nenhuma tarefa recente.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

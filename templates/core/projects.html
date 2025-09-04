@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Lista de Projetos{% endblock %}
+{% block content %}
+<div class="projects-header">
+  <h1 class="projects-title">📋 Gerenciar Projetos</h1>
+  <p class="projects-subtitle">Visualize, organize e controle todos os seus projetos</p>
+</div>
+<div class="projects-panel">
+  <div class="projects-toolbar">
+    <h2>Lista de Projetos</h2>
+    <div class="filters">
+      <input placeholder="🔍 Buscar projetos..." name="q"/>
+      <select name="status">
+        <option value="">📈 Todos os status</option>
+        <option>🟢 Ativo</option>
+        <option>📁 Arquivado</option>
+        <option>🔵 Em planejamento</option>
+      </select>
+    </div>
+  </div>
+  <!-- ... restante do painel de projetos ... -->
+</div>
+{% endblock %}

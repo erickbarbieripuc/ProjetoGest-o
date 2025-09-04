@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Configurações do Projeto{% endblock %}
+{% block content %}
+<div class="settings-header">
+  <div class="settings-title">⚙️ Configurações do Projeto</div>
+  <div class="settings-subtitle">Gerencie as configurações avançadas do seu projeto</div>
+</div>
+<form class="panel" method="post">
+  {% csrf_token %}
+  <h2>🔧 Configurações Gerais</h2>
+  <div class="settings-section"><h3>📈 Status e Visibilidade</h3></div>
+  <!-- ... restante do formulário ... -->
+</form>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Criar/Editar Projeto{% endblock %}
+{% block content %}
+<div class="project-form-header">
+  <div class="project-form-title">🚀 Criar Novo Projeto</div>
+  <div class="project-form-subtitle">Defina as informações e configurações do seu projeto</div>
+</div>
+<form class="panel" method="post" action="/projects/save" data-form="project">
+  {% csrf_token %}
+  <div class="form-section">
+    <h3 class="section-title">Informações Básicas</h3>
+    <div class="form-row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="pname">Nome do Projeto *</label>
+          <input id="pname" name="name" required placeholder="Ex: Sistema de E-commerce"/>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="owner">Gerente do Projeto</label>
+          <input id="owner" name="owner" placeholder="Ex: João Silva"/>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label for="pdesc">Descrição do Projeto</label>
+          <textarea id="pdesc" name="description" placeholder="Descreva os objetivos, escopo e principais funcionalidades do projeto..."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3 class="section-title">Cronograma e Status</h3>
+    <div class="form-row">
+      <div class="col-3">
+        <div class="form-group">
+          <label for="start">Data de Início</label>
+          <input id="start" name="start_date" type="date"/>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-group">
+          <label for="due">Data de Entrega</label>
+          <input id="due" name="due_date" type="date"/>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-group">
+          <label for="status">Status do Projeto</label>
+          <select id="status" name="status">
+            <option>🔵 Planejamento</option>
+            <option>🟢 Ativo</option>
+            <option>📁 Arquivado</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-group">
+          <label for="visibility">Visibilidade</label>
+          <select id="visibility" name="visibility">
+            <option>🔒 Privado</option>
+            <option>🌐 Público</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section team-section">
+    <h3 class="section-title">👥 Configuração da Equipe</h3>
+    <div class="form-row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="team">Membros da Equipe</label>
+          <input id="team" name="team" placeholder="email1@empresa.com, email2@empresa.com"/>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="labels">Tags do Projeto</label>
+          <input id="labels" name="labels" placeholder="frontend, backend, mobile, design"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <a class="btn secondary" href="{% url 'projects' %}">❌ Cancelar</a>
+    <button class="btn" type="submit">💾 Salvar Projeto</button>
+  </div>
+</form>
+{% endblock %}

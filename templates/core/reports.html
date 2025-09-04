@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Relatórios de Produtividade{% endblock %}
+{% block content %}
+<header class="reports-header">
+	<h1 class="reports-title">🚀 Relatórios de Produtividade</h1>
+	<p class="reports-subtitle">Acompanhe métricas e indicadores de performance dos seus projetos</p>
+</header>
+<div class="reports-panel">
+	<h2>Métricas Principais</h2>
+	<div class="grid cols-3">
+		<div class="card"><strong>Taxa de conclusão</strong><div class="badge success">86%</div><p class="hint">Tarefas concluídas vs total</p></div>
+		<div class="card"><strong>Lead time médio</strong><div class="badge">2d</div><p class="hint">Tempo médio de entrega</p></div>
+		<div class="card"><strong>Projetos ativos</strong><div class="badge">5</div><p class="hint">Projetos em andamento</p></div>
+	</div>
+	<!-- ... restante do painel de relatórios ... -->
+</div>
+{% endblock %}

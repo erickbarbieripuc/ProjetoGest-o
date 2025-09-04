@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Equipes (CRUD){% endblock %}
+{% block content %}
+<header class="teams-header">
+	<h1 class="teams-title">Gerenciamento de Equipes</h1>
+	<p class="teams-subtitle">Organize suas equipes e defina permissões de acesso aos projetos</p>
+</header>
+<div class="teams-panel">
+	<div class="teams-toolbar">
+		<h2>Suas Equipes</h2>
+		<button type="button" class="new-team-btn">+ Nova Equipe</button>
+	</div>
+	<table class="teams-table">
+		<thead>
+			<tr>
+				<th>Nome da Equipe</th>
+				<th>Membros</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Equipe Frontend</td>
+				<td>Ana, João</td>
+				<td><button>Editar</button> <button>Excluir</button></td>
+			</tr>
+			<!-- ... outras equipes ... -->
+		</tbody>
+	</table>
+</div>
+{% endblock %}

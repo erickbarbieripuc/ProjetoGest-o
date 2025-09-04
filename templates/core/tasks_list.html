@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Tarefas{% endblock %}
+{% block content %}
+<h1>Tarefas</h1>
+<a href="{% url 'task_new' %}">Nova Tarefa</a>
+<ul>
+  {% for task in tasks %}
+    <li>
+      {{ task.title }} - {{ task.get_status_display }}
+      <a href="{% url 'task_edit' task.pk %}">Editar</a>
+    </li>
+  {% empty %}
+    <li>Nenhuma tarefa encontrada.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

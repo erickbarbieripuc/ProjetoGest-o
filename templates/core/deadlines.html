@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Controle de Prazos{% endblock %}
+{% block content %}
+<header class="deadlines-header">
+	<h1 class="deadlines-title">Controle de Prazos</h1>
+	<p class="deadlines-subtitle">Monitore prazos críticos e mantenha seus projetos em dia</p>
+</header>
+<div class="deadlines-panel">
+	<h2>Resumo de Prazos</h2>
+	<div class="summary-cards">
+		<div class="summary-card"><span class="summary-number">3</span><div class="summary-label">Vencidos</div></div>
+		<div class="summary-card"><span class="summary-number">2</span><div class="summary-label">Hoje</div></div>
+		<div class="summary-card"><span class="summary-number">5</span><div class="summary-label">Próximos</div></div>
+	</div>
+	<!-- ... restante do painel de prazos ... -->
+</div>
+{% endblock %}

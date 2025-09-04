@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Chat Interno{% endblock %}
+{% block content %}
+<header class="chat-header">
+	<h1 class="chat-title">Chat Interno</h1>
+	<p class="chat-subtitle">Comunique-se com sua equipe em tempo real e mantenha todos alinhados</p>
+</header>
+<div class="chat-panel">
+	<h2>Projeto: Sistema de Gestão</h2>
+	<div class="online-users">
+		<div class="user-chip"><div class="user-status"></div><span>Ana Silva</span></div>
+		<div class="user-chip"><div class="user-status"></div><span>João Souza</span></div>
+		<!-- ... outros usuários ... -->
+	</div>
+	<!-- ... restante do conteúdo do chat ... -->
+</div>
+{% endblock %}
